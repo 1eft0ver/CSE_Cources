@@ -1,0 +1,42 @@
+﻿已經開始建置於 2015/4/2 上午 08:46:33。
+     1>節點 2 (build 目標) 上的專案 "c:\Users\宜勳\documents\visual studio 2010\Projects\B033040009_3\B033040009_3\B033040009_3.vcxproj"。
+     1>InitializeBuildStatus:
+         正在變更時間戳記 "Debug\B033040009_3.unsuccessfulbuild"。
+       GenerateTargetFrameworkMonikerAttribute:
+       將略過目標 "GenerateTargetFrameworkMonikerAttribute"，因為所有輸出檔對於其輸入檔而言都已更新。
+       ClCompile:
+         所有輸出都是最新的。
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr:pure /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\B033040009_3.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt B033040009_3.cpp /clr:nostdlib 
+         B033040009_3.cpp
+     1>c:\users\宜勳\documents\visual studio 2010\projects\b033040009_3\b033040009_3\Form1.h(120): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : 請參閱 'fopen' 的宣告
+     1>c:\users\宜勳\documents\visual studio 2010\projects\b033040009_3\b033040009_3\Form1.h(123): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(253) : 請參閱 'fscanf' 的宣告
+     1>c:\users\宜勳\documents\visual studio 2010\projects\b033040009_3\b033040009_3\Form1.h(113): warning C4101: 'input' : 未參考的區域變數
+     1>c:\users\宜勳\documents\visual studio 2010\projects\b033040009_3\b033040009_3\Form1.h(163): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : 請參閱 'fopen' 的宣告
+     1>c:\users\宜勳\documents\visual studio 2010\projects\b033040009_3\b033040009_3\Form1.h(168): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(253) : 請參閱 'fscanf' 的宣告
+     1>c:\users\宜勳\documents\visual studio 2010\projects\b033040009_3\b033040009_3\Form1.h(154): warning C4101: 'input' : 未參考的區域變數
+         所有輸出都是最新的。
+       CoreResGen:
+         相對於資源的來源檔案，並沒有資源過期。將略過產生資源。
+       ResourceCompile:
+         所有輸出都是最新的。
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"c:\users\宜勳\documents\visual studio 2010\Projects\B033040009_3\Debug\B033040009_3.exe" /INCREMENTAL /NOLOGO /ASSEMBLYRESOURCE:Debug\B033040009_3.Form1.resources /MANIFEST /ManifestFile:"Debug\B033040009_3.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"c:\users\宜勳\documents\visual studio 2010\Projects\B033040009_3\Debug\B033040009_3.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\app.res
+         Debug\AssemblyInfo.obj
+         Debug\B033040009_3.obj
+         Debug\stdafx.obj
+         "Debug\.NETFramework,Version=v4.0.AssemblyAttributes.obj"
+         B033040009_3.vcxproj -> c:\users\宜勳\documents\visual studio 2010\Projects\B033040009_3\Debug\B033040009_3.exe
+       Manifest:
+         c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"c:\users\宜勳\documents\visual studio 2010\Projects\B033040009_3\Debug\B033040009_3.exe;#1" /manifest Debug\B033040009_3.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         正在刪除檔案 "Debug\B033040009_3.unsuccessfulbuild"。
+         正在變更時間戳記 "Debug\B033040009_3.lastbuildstate"。
+     1>專案 "c:\Users\宜勳\documents\visual studio 2010\Projects\B033040009_3\B033040009_3\B033040009_3.vcxproj" (build 目標) 建置完成。
+
+建置成功。
+
+經過時間 00:00:01.43

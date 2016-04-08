@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C++ Express 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Breakout_clone_by12932", "Breakout_clone_by12932\Breakout_clone_by12932.vcxproj", "{96B0F44B-3604-40AB-A8CD-45D60059C0FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{96B0F44B-3604-40AB-A8CD-45D60059C0FB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{96B0F44B-3604-40AB-A8CD-45D60059C0FB}.Debug|Win32.Build.0 = Debug|Win32
+		{96B0F44B-3604-40AB-A8CD-45D60059C0FB}.Release|Win32.ActiveCfg = Release|Win32
+		{96B0F44B-3604-40AB-A8CD-45D60059C0FB}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

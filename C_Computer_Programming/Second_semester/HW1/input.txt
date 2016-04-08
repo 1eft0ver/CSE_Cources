@@ -1,0 +1,6 @@
+12 15 21 24
+Push 16
+Pop 16
+Pop 24
+Pop 21
+Push 18

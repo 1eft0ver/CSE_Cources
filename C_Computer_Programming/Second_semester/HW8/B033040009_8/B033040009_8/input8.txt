@@ -1,0 +1,8 @@
+delete 5
+insertfront 64
+insertback 21
+insertfront 17
+delete 64
+delete 99
+insertfront 85
+insertback 36

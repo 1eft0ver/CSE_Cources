@@ -1,0 +1,6 @@
+﻿B033040010 Mary female 30 cjd@msn.com a.jpg 高雄市鼓山區蓮海路70號
+B033040011 Tom male 22 good@gmail.com e.jpg 高雄市鼓山區蓮海路72號
+B033040012 John male 8 jyjy@yahoo.com b.jpg 高雄市鼓山區蓮海路75號
+B033040014 Asuna female 17 sao@msn.com f.jpg 高雄市鼓山區蓮海路71號
+B033040013 Joe male 55 rekdg@yahoo.com c.jpg 高雄市鼓山區蓮海路73號
+B033040015 Mark female 46 tdgdk@gmail.com d.jpg 高雄市鼓山區蓮海路74號

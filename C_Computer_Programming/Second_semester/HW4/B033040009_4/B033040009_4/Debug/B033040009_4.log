@@ -1,0 +1,61 @@
+﻿已經開始建置於 2015/4/9 上午 08:38:09。
+     1>節點 2 (build 目標) 上的專案 "C:\Users\宜勳\Desktop\C程\下學期\HW4\B033040009_4\B033040009_4\B033040009_4.vcxproj"。
+     1>InitializeBuildStatus:
+         由於指定了 "AlwaysCreate"，因此正在建立 "Debug\B033040009_4.unsuccessfulbuild"。
+       GenerateTargetFrameworkMonikerAttribute:
+       將略過目標 "GenerateTargetFrameworkMonikerAttribute"，因為所有輸出檔對於其輸入檔而言都已更新。
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr:pure /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Debug\B033040009_4.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt stdafx.cpp /clr:nostdlib 
+         stdafx.cpp
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr:pure /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\B033040009_4.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt AssemblyInfo.cpp B033040009_4.cpp /clr:nostdlib 
+         AssemblyInfo.cpp
+         B033040009_4.cpp
+     1>c:\users\宜勳\desktop\c程\下學期\hw4\b033040009_4\b033040009_4\Form1.h(16): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : 請參閱 'fopen' 的宣告
+     1>c:\users\宜勳\desktop\c程\下學期\hw4\b033040009_4\b033040009_4\Form1.h(231): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(253) : 請參閱 'fscanf' 的宣告
+     1>c:\users\宜勳\desktop\c程\下學期\hw4\b033040009_4\b033040009_4\Form1.h(248): warning C4244: '引數' : 將 'int' 轉換為 'float'，由於型別不同，可能導致資料遺失
+     1>c:\users\宜勳\desktop\c程\下學期\hw4\b033040009_4\b033040009_4\Form1.h(248): warning C4244: '引數' : 將 'int' 轉換為 'float'，由於型別不同，可能導致資料遺失
+     1>c:\users\宜勳\desktop\c程\下學期\hw4\b033040009_4\b033040009_4\Form1.h(249): warning C4244: '引數' : 將 'int' 轉換為 'float'，由於型別不同，可能導致資料遺失
+     1>c:\users\宜勳\desktop\c程\下學期\hw4\b033040009_4\b033040009_4\Form1.h(249): warning C4244: '引數' : 將 'int' 轉換為 'float'，由於型別不同，可能導致資料遺失
+     1>c:\users\宜勳\desktop\c程\下學期\hw4\b033040009_4\b033040009_4\Form1.h(283): warning C4244: '引數' : 將 'int' 轉換為 'float'，由於型別不同，可能導致資料遺失
+     1>c:\users\宜勳\desktop\c程\下學期\hw4\b033040009_4\b033040009_4\Form1.h(283): warning C4244: '引數' : 將 'int' 轉換為 'float'，由於型別不同，可能導致資料遺失
+     1>c:\users\宜勳\desktop\c程\下學期\hw4\b033040009_4\b033040009_4\Form1.h(284): warning C4244: '引數' : 將 'int' 轉換為 'float'，由於型別不同，可能導致資料遺失
+     1>c:\users\宜勳\desktop\c程\下學期\hw4\b033040009_4\b033040009_4\Form1.h(284): warning C4244: '引數' : 將 'int' 轉換為 'float'，由於型別不同，可能導致資料遺失
+     1>c:\users\宜勳\desktop\c程\下學期\hw4\b033040009_4\b033040009_4\Form1.h(302): warning C4244: '引數' : 將 'int' 轉換為 'float'，由於型別不同，可能導致資料遺失
+     1>c:\users\宜勳\desktop\c程\下學期\hw4\b033040009_4\b033040009_4\Form1.h(302): warning C4244: '引數' : 將 'int' 轉換為 'float'，由於型別不同，可能導致資料遺失
+     1>c:\users\宜勳\desktop\c程\下學期\hw4\b033040009_4\b033040009_4\Form1.h(303): warning C4244: '引數' : 將 'int' 轉換為 'float'，由於型別不同，可能導致資料遺失
+     1>c:\users\宜勳\desktop\c程\下學期\hw4\b033040009_4\b033040009_4\Form1.h(303): warning C4244: '引數' : 將 'int' 轉換為 'float'，由於型別不同，可能導致資料遺失
+     1>c:\users\宜勳\desktop\c程\下學期\hw4\b033040009_4\b033040009_4\Form1.h(324): warning C4244: '引數' : 將 'int' 轉換為 'float'，由於型別不同，可能導致資料遺失
+     1>c:\users\宜勳\desktop\c程\下學期\hw4\b033040009_4\b033040009_4\Form1.h(324): warning C4244: '引數' : 將 'int' 轉換為 'float'，由於型別不同，可能導致資料遺失
+     1>c:\users\宜勳\desktop\c程\下學期\hw4\b033040009_4\b033040009_4\Form1.h(325): warning C4244: '引數' : 將 'int' 轉換為 'float'，由於型別不同，可能導致資料遺失
+     1>c:\users\宜勳\desktop\c程\下學期\hw4\b033040009_4\b033040009_4\Form1.h(325): warning C4244: '引數' : 將 'int' 轉換為 'float'，由於型別不同，可能導致資料遺失
+     1>c:\users\宜勳\desktop\c程\下學期\hw4\b033040009_4\b033040009_4\Form1.h(346): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(253) : 請參閱 'fscanf' 的宣告
+     1>c:\users\宜勳\desktop\c程\下學期\hw4\b033040009_4\b033040009_4\Form1.h(371): warning C4244: '引數' : 將 'int' 轉換為 'float'，由於型別不同，可能導致資料遺失
+     1>c:\users\宜勳\desktop\c程\下學期\hw4\b033040009_4\b033040009_4\Form1.h(371): warning C4244: '引數' : 將 'int' 轉換為 'float'，由於型別不同，可能導致資料遺失
+     1>c:\users\宜勳\desktop\c程\下學期\hw4\b033040009_4\b033040009_4\Form1.h(372): warning C4244: '引數' : 將 'int' 轉換為 'float'，由於型別不同，可能導致資料遺失
+     1>c:\users\宜勳\desktop\c程\下學期\hw4\b033040009_4\b033040009_4\Form1.h(372): warning C4244: '引數' : 將 'int' 轉換為 'float'，由於型別不同，可能導致資料遺失
+         正在產生程式碼...
+         所有輸出都是最新的。
+       CoreResGen:
+         相對於資源的來源檔案，並沒有資源過期。將略過產生資源。
+       ResourceCompile:
+         c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"Debug\app.res" app.rc 
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\宜勳\Desktop\C程\下學期\HW4\B033040009_4\Debug\B033040009_4.exe" /INCREMENTAL /NOLOGO /ASSEMBLYRESOURCE:Debug\B033040009_4.Form1.resources /MANIFEST /ManifestFile:"Debug\B033040009_4.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\宜勳\Desktop\C程\下學期\HW4\B033040009_4\Debug\B033040009_4.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\app.res
+         Debug\AssemblyInfo.obj
+         Debug\B033040009_4.obj
+         Debug\stdafx.obj
+         "Debug\.NETFramework,Version=v4.0.AssemblyAttributes.obj"
+         B033040009_4.vcxproj -> C:\Users\宜勳\Desktop\C程\下學期\HW4\B033040009_4\Debug\B033040009_4.exe
+       Manifest:
+         c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\宜勳\Desktop\C程\下學期\HW4\B033040009_4\Debug\B033040009_4.exe;#1" /manifest Debug\B033040009_4.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         正在刪除檔案 "Debug\B033040009_4.unsuccessfulbuild"。
+         正在變更時間戳記 "Debug\B033040009_4.lastbuildstate"。
+     1>專案 "C:\Users\宜勳\Desktop\C程\下學期\HW4\B033040009_4\B033040009_4\B033040009_4.vcxproj" (build 目標) 建置完成。
+
+建置成功。
+
+經過時間 00:00:04.95

@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1450708944 source:c:\users\宜勳\desktop\資料結構\作業\7\hw7-b033040009\main.cpp
+	<iostream>
+	<fstream>
+	<time.h>
+	<stdio.h>
+	<stdlib.h>
+	<algorithm>
+
