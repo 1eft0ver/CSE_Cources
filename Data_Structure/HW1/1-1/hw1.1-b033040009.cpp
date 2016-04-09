@@ -1,7 +1,7 @@
-/*
-Author¡G½²©y¾± B033040009 
-Date¡GOct. 4, 2015
-Purpose¡G»s§@N¶¥(N¬°©_¼Æ)ªºÅ]¤è°}(magic square) 
+ï»¿/*
+Authorï¼šè”¡å®œå‹³ B033040009 
+Dateï¼šOct. 4, 2015
+Purposeï¼šè£½ä½œNéš(Nç‚ºå¥‡æ•¸)çš„é­”æ–¹é™£(magic square) 
 */ 
 
 #include <iostream>
@@ -10,25 +10,25 @@ Purpose¡G»s§@N¶¥(N¬°©_¼Æ)ªºÅ]¤è°}(magic square)
 using namespace std;
 
 int main(){
-	int n; 													//n¶¥Å]¤è°} 
+	int n; 													//néšé­”æ–¹é™£ 
 	while(cin >> n){ 
-		int matrix[9][9];              						//¼g¤JÅ]¤è°}ªº¤Gºû°}¦C¡A¦]¬°ÃD¥Ø­­©w¤W­­¬°9¶¥Å]¤è°}¡A¦]¦¹size³]©w¬°9 
-		int start_point = n / 2;							//matrix[0][start_point]§Y¬°Å]¤è°}¤¤1ªº¦ì¸m 
+		int matrix[9][9];              						//å¯«å…¥é­”æ–¹é™£çš„äºŒç¶­é™£åˆ—ï¼Œå› ç‚ºé¡Œç›®é™å®šä¸Šé™ç‚º9éšé­”æ–¹é™£ï¼Œå› æ­¤sizeè¨­å®šç‚º9 
+		int start_point = n / 2;							//matrix[0][start_point]å³ç‚ºé­”æ–¹é™£ä¸­1çš„ä½ç½® 
 		
 		for(int x = 0 ; x < 9 ; ++x)
 		for(int y = 0 ; y < 9 ; ++y)
-		matrix[x][y] = 0;              						//ªì©l¤Æ°}¦C¤º©Ò¦³¤¸¯À¬°0 
+		matrix[x][y] = 0;              						//åˆå§‹åŒ–é™£åˆ—å…§æ‰€æœ‰å…ƒç´ ç‚º0 
 			
-			int now_row = 0;								//now_row : ²{¦bÀ³¸Ó±N¼Æ­È¶ñ¤Jªº¦ì¸mªºrow 
-			int now_column = start_point;					//now_column : ²{¦bÀ³¸Ó±N¼Æ­È¶ñ¤Jªº¦ì¸mªºcolumn
+			int now_row = 0;								//now_row : ç¾åœ¨æ‡‰è©²å°‡æ•¸å€¼å¡«å…¥çš„ä½ç½®çš„row 
+			int now_column = start_point;					//now_column : ç¾åœ¨æ‡‰è©²å°‡æ•¸å€¼å¡«å…¥çš„ä½ç½®çš„column
 			for(int i = 1 ; i <= n * n ; ++i){
 				matrix[now_row][now_column] = i;
-				int ori_row = now_row;						//ori_row : ¬ö¿ı¤W¤@­Ó¶ñ¤J¼Æ­Èªº¦ì¸mªºrow 
-				int ori_column = now_column;				//ori_column :  ¬ö¿ı¤W¤@­Ó¶ñ¤J¼Æ­Èªº¦ì¸mªºcolumn
+				int ori_row = now_row;						//ori_row : ç´€éŒ„ä¸Šä¸€å€‹å¡«å…¥æ•¸å€¼çš„ä½ç½®çš„row 
+				int ori_column = now_column;				//ori_column :  ç´€éŒ„ä¸Šä¸€å€‹å¡«å…¥æ•¸å€¼çš„ä½ç½®çš„column
 				now_row--;
 				now_column--;
 					
-					if(now_row < 0)							 //¨Ì·ÓÅ]¤è°}ªº³W«ßÃ¸»sÅ]¤è°} 
+					if(now_row < 0)							 //ä¾ç…§é­”æ–¹é™£çš„è¦å¾‹ç¹ªè£½é­”æ–¹é™£ 
 					now_row = n - 1;
 					
 					if(now_column < 0)
@@ -43,12 +43,12 @@ int main(){
 					}
 			}
 			
-			for(int x = 0 ; x < n ; ++x){    				//¿é¥XÅ]¤è°} 
+			for(int x = 0 ; x < n ; ++x){    				//è¼¸å‡ºé­”æ–¹é™£ 
 			for(int y = 0 ; y < n ; ++y){
-			cout << setw(2);                               	//®æ¦¡¤Æ¿é¥X 
+			cout << setw(2);                               	//æ ¼å¼åŒ–è¼¸å‡º 
 			cout << matrix[x][y] << " ";
 			}
-			cout << endl;									//´«¦æ 
+			cout << endl;									//æ›è¡Œ 
 			}
 	}
 }

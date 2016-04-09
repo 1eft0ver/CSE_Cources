@@ -1,19 +1,19 @@
 /*
-Author¡G½²©y¾± B033040009
-Date¡GNov. 23, 2015
-Purpose:³B²z¨â­Ó¦h¶µ¦¡¤§¥[ªk»P­¼ªk
+Authorï¼šè”¡å®œå‹³ B033040009
+Dateï¼šNov. 23, 2015
+Purpose:è™•ç†å…©å€‹å¤šé …å¼ä¹‹åŠ æ³•èˆ‡ä¹˜æ³•
 */
 
 #include <iostream>
 #include <stdlib.h>
 using namespace std;
 
-class PolyNode                  //Linked List¸`ÂIªºClass
+class PolyNode                  //Linked Listç¯€é»çš„Class
 {
     public:
     PolyNode *next;
-    int coef;                   //coef : «Y¼Æ
-    int exp;                    //exp  : «ü¼Æ
+    int coef;                   //coef : ä¿‚æ•¸
+    int exp;                    //exp  : æŒ‡æ•¸
 
     private:
 };
@@ -23,13 +23,13 @@ class LinkedList
     public:
         LinkedList();           //Linked List Constructor
         ~LinkedList();          //Linked List Destructor
-        void insert_back(int _coef, int _exp);              //±Ndata©ñ¤JList§Àºİªº¨ç¦¡
-        void insert_front(int _coef, int _exp);             //±Ndata©ñ¤JList«eºİªº¨ç¦¡
-        void insert_prev(PolyNode *n, int _coef, int _exp); //±Ndata©ñ¤JList¤¤«ü©w¦ì¸m«e¤@®æªº¨ç¦¡
-        LinkedList format();                                //±NList«ö·Ó«ü¼Æ¤j¤p¶¶§Ç±Æ¦C¡A¨Ã¥B¥h°£±¼«Y¼Æ¬°0ªº¶µªº¨ç¦¡
+        void insert_back(int _coef, int _exp);              //å°‡dataæ”¾å…¥Listå°¾ç«¯çš„å‡½å¼
+        void insert_front(int _coef, int _exp);             //å°‡dataæ”¾å…¥Listå‰ç«¯çš„å‡½å¼
+        void insert_prev(PolyNode *n, int _coef, int _exp); //å°‡dataæ”¾å…¥Listä¸­æŒ‡å®šä½ç½®å‰ä¸€æ ¼çš„å‡½å¼
+        LinkedList format();                                //å°‡ListæŒ‰ç…§æŒ‡æ•¸å¤§å°é †åºæ’åˆ—ï¼Œä¸¦ä¸”å»é™¤æ‰ä¿‚æ•¸ç‚º0çš„é …çš„å‡½å¼
         LinkedList operator+(const LinkedList& l);          //overload operator +
 		LinkedList operator*(const LinkedList& l);          //overload operator *
-		void print_list();                                  //¿é¥XList¤º®eªº¨ç¦¡
+		void print_list();                                  //è¼¸å‡ºListå…§å®¹çš„å‡½å¼
     private:
         PolyNode *head;
 };
@@ -80,7 +80,7 @@ void LinkedList::insert_prev(PolyNode *n, int _coef, int _exp)
 	newNode->next = n;
 
     PolyNode* current = head;
-    if(current->next == NULL )  //°²­YList¤º¥u¦³¤@­Óelementªº±¡ªp
+    if(current->next == NULL )  //å‡è‹¥Listå…§åªæœ‰ä¸€å€‹elementçš„æƒ…æ³
         head = newNode;
 
     else
@@ -106,26 +106,26 @@ LinkedList LinkedList::format()
     {
 
         PolyNode* formatted_current = formattedList.head;
-        if(current->coef != 0){                 //±Æ°£«Y¼Æ¬°0ªº±¡ªp
+        if(current->coef != 0){                 //æ’é™¤ä¿‚æ•¸ç‚º0çš„æƒ…æ³
 
-            if(formatted_current == NULL)       //List¬°ªÅªº±¡ªp¡Aª½±µ±N¸ê®Æinsert_back§Y¥i(insert_front¥ç¥i)
+            if(formatted_current == NULL)       //Listç‚ºç©ºçš„æƒ…æ³ï¼Œç›´æ¥å°‡è³‡æ–™insert_backå³å¯(insert_frontäº¦å¯)
                 formattedList.insert_back(current->coef, current->exp);
 
             else
             {
                 while(formatted_current != NULL)
                 {
-                    if(current->exp > formatted_current->exp){          //·í²{¦bÅª¨ú¨ìªº¸ê®Æªº«ü¼Æ¤j©ó²{¦b«ü¦Vªº¸ê®Æªº«ü¼Æ®É¡A±N¸Óµ§¸ê®Æ´¡¤J·í«e¸ê®Æ«e¤@®æ
+                    if(current->exp > formatted_current->exp){          //ç•¶ç¾åœ¨è®€å–åˆ°çš„è³‡æ–™çš„æŒ‡æ•¸å¤§æ–¼ç¾åœ¨æŒ‡å‘çš„è³‡æ–™çš„æŒ‡æ•¸æ™‚ï¼Œå°‡è©²ç­†è³‡æ–™æ’å…¥ç•¶å‰è³‡æ–™å‰ä¸€æ ¼
                         formattedList.insert_prev(formatted_current, current->coef, current->exp);
                         break;
                     }
 
-                    else if(current->exp == formatted_current->exp){    //·í²{¦bÅª¨ú¨ìªº¸ê®Æªº«ü¼Æµ¥©ó²{¦b«ü¦Vªº¸ê®Æªº«ü¼Æ®É¡A±N«Y¼Æ¬Û¥[
+                    else if(current->exp == formatted_current->exp){    //ç•¶ç¾åœ¨è®€å–åˆ°çš„è³‡æ–™çš„æŒ‡æ•¸ç­‰æ–¼ç¾åœ¨æŒ‡å‘çš„è³‡æ–™çš„æŒ‡æ•¸æ™‚ï¼Œå°‡ä¿‚æ•¸ç›¸åŠ 
                         formatted_current->coef += current->coef;
                         break;
                     }
 
-                    else if(formatted_current->next == NULL){           //Åª¨ìList§Àºİ®É¡A¥Nªí²{¦bÅª¨ìªº³oµ§¸ê®Æªº«ü¼Æ¤p©ó·í«e©Ò¦³¸ê®Æ¡A¦]¦¹±N³oµ§¸ê®Æ©ñ¤JList§Àºİ
+                    else if(formatted_current->next == NULL){           //è®€åˆ°Listå°¾ç«¯æ™‚ï¼Œä»£è¡¨ç¾åœ¨è®€åˆ°çš„é€™ç­†è³‡æ–™çš„æŒ‡æ•¸å°æ–¼ç•¶å‰æ‰€æœ‰è³‡æ–™ï¼Œå› æ­¤å°‡é€™ç­†è³‡æ–™æ”¾å…¥Listå°¾ç«¯
                         formattedList.insert_back(current->coef, current->exp);
                         break;
                     }
@@ -139,7 +139,7 @@ LinkedList LinkedList::format()
     current = current->next;
     }
 
-    if(formattedList.head == NULL)  //·í¨S¦³¸ê®Æ¡A¤]´N¬O¬Û­¼®É­¼¼Æ©Î³Q­¼¼Æ¬°0¡A©Î¬O¬Û¥[¬Û©è¦¨0®É¡Areturn coef = 0, exp = 0
+    if(formattedList.head == NULL)  //ç•¶æ²’æœ‰è³‡æ–™ï¼Œä¹Ÿå°±æ˜¯ç›¸ä¹˜æ™‚ä¹˜æ•¸æˆ–è¢«ä¹˜æ•¸ç‚º0ï¼Œæˆ–æ˜¯ç›¸åŠ ç›¸æŠµæˆ0æ™‚ï¼Œreturn coef = 0, exp = 0
     {
         LinkedList zero;
         zero.insert_back(0,0);
@@ -153,7 +153,7 @@ LinkedList LinkedList::operator*(const LinkedList& multiplier)
 {
     LinkedList result, mulitplicand;
     PolyNode* temp = head;
-    while(temp != NULL)         //¬°¤F½T«O¤£§ïÅÜ³Q­¼¼Æªº¼Æ­È¡A¨Ï¥Î·sªºList¦s¨ú³Q­¼¼Æªº­È
+    while(temp != NULL)         //ç‚ºäº†ç¢ºä¿ä¸æ”¹è®Šè¢«ä¹˜æ•¸çš„æ•¸å€¼ï¼Œä½¿ç”¨æ–°çš„Listå­˜å–è¢«ä¹˜æ•¸çš„å€¼
     {
             mulitplicand.insert_back(temp->coef, temp->exp);
             temp = temp->next;
@@ -162,7 +162,7 @@ LinkedList LinkedList::operator*(const LinkedList& multiplier)
     PolyNode* multiplier_current = multiplier.head;
 
     if ((mulitplicand_current->exp == 0 && mulitplicand_current->coef == 0)
-        || (multiplier_current->exp == 0 && mulitplicand_current->coef == 0))   //°²­Y­¼¼Æ©Î³Q­¼¼Æ¬°0®É¡A¿n¥²¬°0
+        || (multiplier_current->exp == 0 && mulitplicand_current->coef == 0))   //å‡è‹¥ä¹˜æ•¸æˆ–è¢«ä¹˜æ•¸ç‚º0æ™‚ï¼Œç©å¿…ç‚º0
     {
         LinkedList zero;
         zero.insert_back(0,0);
@@ -176,7 +176,7 @@ LinkedList LinkedList::operator*(const LinkedList& multiplier)
             multiplier_current = multiplier.head;
             while(multiplier_current != NULL)
             {
-            result.insert_back(mulitplicand_current->coef * multiplier_current->coef, mulitplicand_current->exp + multiplier_current->exp); //±N¦U¶µ¥æ¤e¬Û­¼«áª½±µinsert_back¤Jlist¤º¡A³Ì«áªºµ²ªG¦Aformat§Y¥i
+            result.insert_back(mulitplicand_current->coef * multiplier_current->coef, mulitplicand_current->exp + multiplier_current->exp); //å°‡å„é …äº¤å‰ç›¸ä¹˜å¾Œç›´æ¥insert_backå…¥listå…§ï¼Œæœ€å¾Œçš„çµæœå†formatå³å¯
             multiplier_current = multiplier_current-> next;
             }
         mulitplicand_current = mulitplicand_current->next;
@@ -189,7 +189,7 @@ LinkedList LinkedList::operator+(const LinkedList& addend)
 {
     LinkedList result;
     PolyNode* temp = head;
-    while(temp != NULL)     //¬°¤F½T«O¤£§ïÅÜ³Q¥[¼Æªº¼Æ­È¡A¨Ï¥Î·sªºList¦s¨ú³Q¥[¼Æªº­È
+    while(temp != NULL)     //ç‚ºäº†ç¢ºä¿ä¸æ”¹è®Šè¢«åŠ æ•¸çš„æ•¸å€¼ï¼Œä½¿ç”¨æ–°çš„Listå­˜å–è¢«åŠ æ•¸çš„å€¼
     {
             result.insert_back(temp->coef, temp->exp);
             temp = temp->next;
@@ -197,34 +197,34 @@ LinkedList LinkedList::operator+(const LinkedList& addend)
     PolyNode* result_current = result.head;
     PolyNode* addend_current = addend.head;
 
-    if(result_current->exp == 0 && result_current->coef == 0)  //³Q¥[¼Æ¬°0®É¡Areturn¥[¼Æ
+    if(result_current->exp == 0 && result_current->coef == 0)  //è¢«åŠ æ•¸ç‚º0æ™‚ï¼ŒreturnåŠ æ•¸
     return addend;
 
-    else if(addend_current->exp == 0 && addend_current->coef == 0)  //¥[¼Æ¬°0®É¡Areturn³Q¥[¼Æ
+    else if(addend_current->exp == 0 && addend_current->coef == 0)  //åŠ æ•¸ç‚º0æ™‚ï¼Œreturnè¢«åŠ æ•¸
     return result;
 
     else
     {
         while(addend_current != NULL)
         {
-            while(result_current != NULL)   //¤@¶µ¤@¶µ¦s¨ú¥[¼Æ¥[¶i³Q¥[¼Æ¤º
+            while(result_current != NULL)   //ä¸€é …ä¸€é …å­˜å–åŠ æ•¸åŠ é€²è¢«åŠ æ•¸å…§
             {
-                if(addend_current == NULL)  //°²­Y©Ò¦³¥[¼Æªº¶µ³£¥[¹L¤F¡AÂ÷¶}°j°é
+                if(addend_current == NULL)  //å‡è‹¥æ‰€æœ‰åŠ æ•¸çš„é …éƒ½åŠ éäº†ï¼Œé›¢é–‹è¿´åœˆ
                     break;
 
-                if(addend_current->exp > result_current->exp)   //°²­Y·í«eÅª¨ú¨ìªº¶µªº«ü¼Æ¤j©ó·í«e«ü¦Vªº³Q¥[¼Æªº¶µ¡A±N¸Óµ§¸ê®Æ´¡¤J·í«e¸ê®Æ«e¤@®æ
+                if(addend_current->exp > result_current->exp)   //å‡è‹¥ç•¶å‰è®€å–åˆ°çš„é …çš„æŒ‡æ•¸å¤§æ–¼ç•¶å‰æŒ‡å‘çš„è¢«åŠ æ•¸çš„é …ï¼Œå°‡è©²ç­†è³‡æ–™æ’å…¥ç•¶å‰è³‡æ–™å‰ä¸€æ ¼
                 {
                     result.insert_front(addend_current->coef, addend_current->exp);
                     addend_current = addend_current->next;
                     continue;
                 }
-                else if(addend_current->exp == result_current->exp)     //·í²{¦bÅª¨ú¨ìªº¸ê®Æªº«ü¼Æµ¥©ó²{¦b«ü¦Vªº¸ê®Æªº«ü¼Æ®É¡A±N«Y¼Æ¬Û¥[
+                else if(addend_current->exp == result_current->exp)     //ç•¶ç¾åœ¨è®€å–åˆ°çš„è³‡æ–™çš„æŒ‡æ•¸ç­‰æ–¼ç¾åœ¨æŒ‡å‘çš„è³‡æ–™çš„æŒ‡æ•¸æ™‚ï¼Œå°‡ä¿‚æ•¸ç›¸åŠ 
                 {
                     result_current->coef += addend_current->coef;
                     addend_current = addend_current->next;
                     continue;
                 }
-                else if(result_current->next == NULL)                   //Åª¨ìList§Àºİ®É¡A¥Nªí²{¦bÅª¨ìªº³oµ§¸ê®Æªº«ü¼Æ¤p©ó·í«e©Ò¦³¸ê®Æ¡A¦]¦¹±N³oµ§¸ê®Æ©ñ¤JList§Àºİ
+                else if(result_current->next == NULL)                   //è®€åˆ°Listå°¾ç«¯æ™‚ï¼Œä»£è¡¨ç¾åœ¨è®€åˆ°çš„é€™ç­†è³‡æ–™çš„æŒ‡æ•¸å°æ–¼ç•¶å‰æ‰€æœ‰è³‡æ–™ï¼Œå› æ­¤å°‡é€™ç­†è³‡æ–™æ”¾å…¥Listå°¾ç«¯
                 {
                     result.insert_back(addend_current->coef, addend_current->exp);
                     addend_current = addend_current->next;
@@ -238,7 +238,7 @@ LinkedList LinkedList::operator+(const LinkedList& addend)
     }
 }
 
-void LinkedList::print_list()       //¨µ¦æ¨Ã¦L¥XListªº¤º®e
+void LinkedList::print_list()       //å·¡è¡Œä¸¦å°å‡ºListçš„å…§å®¹
 {
     PolyNode *current = head;
     while(current != NULL)
@@ -251,7 +251,7 @@ void LinkedList::print_list()       //¨µ¦æ¨Ã¦L¥XListªº¤º®e
 int main()
 {
     int n, m;
-    int counter = 1;    //­pºâ·í«e¬°Case´Xªºcounter
+    int counter = 1;    //è¨ˆç®—ç•¶å‰ç‚ºCaseå¹¾çš„counter
     while(1)
     {
     cin >> n;
@@ -274,7 +274,7 @@ int main()
         }
         l2 = l2.format();
 
-    if(n == 0 && m == 0)        //·ín»Pm¬Ò¬°0®É¡Aµ²§ôµ{¦¡
+    if(n == 0 && m == 0)        //ç•¶nèˆ‡mçš†ç‚º0æ™‚ï¼ŒçµæŸç¨‹å¼
         break;
     cout << "Case" << counter << ":" <<endl;
     cout << "ADD" << endl;

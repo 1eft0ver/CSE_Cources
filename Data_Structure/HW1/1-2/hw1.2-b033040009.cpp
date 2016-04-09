@@ -1,31 +1,31 @@
 /*
-Author¡G½²©y¾± B033040009 
-Date¡GOct. 5, 2015
-Purpose¡G¦L¥X1¨ìN¤§¶¡©Ò¦³¾ã¼Æ¤§¶¥­¼ (factorial)¡AN<=50
-*/ 
+Authorï¼šè”¡å®œå‹³ B033040009
+Dateï¼šOct. 5, 2015
+Purposeï¼šå°å‡º1åˆ°Nä¹‹é–“æ‰€æœ‰æ•´æ•¸ä¹‹éšä¹˜ (factorial)ï¼ŒN<=50
+*/
 
 #include <iostream>
 
 using namespace std;
 
-int main(){	
-	int n; 											 
+int main(){
+	int n;
 	while(cin >> n){
-		if(n == 0)									 //­Y¿é¤J¬°0¡Aµ²§ôµ{¦¡ 
+		if(n == 0)									 //è‹¥è¼¸å…¥ç‚º0ï¼ŒçµæŸç¨‹å¼
 		break;
-		
-		int fac[100];								 //¥H¤@¦W¬°facªº°}¦C¶i¦æ¶¥­¼ªº¤j¼Æ­¼ªk¡Aµ¹¤©¨ä¶W¹LÃD¥Ø³]©w¤§´ú¸Õ¸ê®Æ¤W­­50!ªº¦ì¼ÆSize 
-		for(int i = 0 ; i < 100 ; ++i)               //ªì©l¤Æ°}¦C 
+
+		int fac[100];								 //ä»¥ä¸€åç‚ºfacçš„é™£åˆ—é€²è¡Œéšä¹˜çš„å¤§æ•¸ä¹˜æ³•ï¼Œçµ¦äºˆå…¶è¶…éé¡Œç›®è¨­å®šä¹‹æ¸¬è©¦è³‡æ–™ä¸Šé™50!çš„ä½æ•¸Size
+		for(int i = 0 ; i < 100 ; ++i)               //åˆå§‹åŒ–é™£åˆ—
 		fac[i] = 0;
-		fac[0] = 1;									 //ªì©l­È¥²¶·¬°1 
-		
-		
-		for(int x = 1 ; x <= n ; ++x){               //¦Û1¶¥¶}©l­¼¨ìn¶¥¬°¤î 
-			for(int y = 0 ; y < 100 ; ++y)			 //±q­Ó¦ì¼Æ¶}©l¡A¨C­Ó¦ì¼Æ³£­¼¤W²{¦bªºx­È 
+		fac[0] = 1;									 //åˆå§‹å€¼å¿…é ˆç‚º1
+
+
+		for(int x = 1 ; x <= n ; ++x){               //è‡ª1éšé–‹å§‹ä¹˜åˆ°néšç‚ºæ­¢
+			for(int y = 0 ; y < 100 ; ++y)			 //å¾å€‹ä½æ•¸é–‹å§‹ï¼Œæ¯å€‹ä½æ•¸éƒ½ä¹˜ä¸Šç¾åœ¨çš„xå€¼
 				fac[y] = fac[y] * x;
-				
-			for(int z = 0 ; z < 100 ; ++z){			 //¶i¦æ¶i¦ì³B²z 
-				int buf;							 //buf¥Î¨Ó¦s©ñ¶i¦ìªº¼Æ­È 
+
+			for(int z = 0 ; z < 100 ; ++z){			 //é€²è¡Œé€²ä½è™•ç†
+				int buf;							 //bufç”¨ä¾†å­˜æ”¾é€²ä½çš„æ•¸å€¼
 				if(fac[z] >= 10){
 					buf = fac[z] / 10;
 					fac[z] = fac[z] % 10;
@@ -33,14 +33,14 @@ int main(){
 				}
 			}
 		cout << x << "!=";
-		int zero_check = 99;						 //zero_check¦Û°}¦C§Àºİ©¹«e¨µ¦æ¡A·í§ä¨ì²Ä¤@­Ó«D0ªº¼Æ­È®É¡A§Y¥Nªí¸Ó¦ì¸m¬°¿é¥Xªì©lÂI 
+		int zero_check = 99;						 //zero_checkè‡ªé™£åˆ—å°¾ç«¯å¾€å‰å·¡è¡Œï¼Œç•¶æ‰¾åˆ°ç¬¬ä¸€å€‹é0çš„æ•¸å€¼æ™‚ï¼Œå³ä»£è¡¨è©²ä½ç½®ç‚ºè¼¸å‡ºåˆå§‹é»
 			while(fac[zero_check] == 0)
 			--zero_check;
-			
-			for(int pos = zero_check ; pos >= 0 ; --pos)	//¿é¥X¥X¼Æ­È 
+
+			for(int pos = zero_check ; pos >= 0 ; --pos)	//è¼¸å‡ºå‡ºæ•¸å€¼
 			cout << fac[pos];
 			cout << endl;
 		}
-	cout << endl;											//¤£¦P´ú¸ê¤§¶¡ªº´«¦æ 
+	cout << endl;											//ä¸åŒæ¸¬è³‡ä¹‹é–“çš„æ›è¡Œ
 	}
-} 
+}

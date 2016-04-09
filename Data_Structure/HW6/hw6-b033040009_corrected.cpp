@@ -1,14 +1,14 @@
 /*
-Author¡G½²©y¾± B033040009
-Date¡GDec. 7, 2015
-Purpose:µ¹¤©¤@¦ê¼Æ¦r¡A§ä¥X©Ò¦³¥X²{¦¸¼Æ¬°©_¼Æ¤§¼Æ¦r
+Authorï¼šè”¡å®œå‹³ B033040009
+Dateï¼šDec. 7, 2015
+Purpose:çµ¦äºˆä¸€ä¸²æ•¸å­—ï¼Œæ‰¾å‡ºæ‰€æœ‰å‡ºç¾æ¬¡æ•¸ç‚ºå¥‡æ•¸ä¹‹æ•¸å­—
 */
 
 #include <iostream>
 
 using namespace std;
 int count = 0;
-class TreeNode  //Treeªº¸`ÂI
+class TreeNode  //Treeçš„ç¯€é»
 {
     public:
     int data;
@@ -21,17 +21,17 @@ class TreeNode  //Treeªº¸`ÂI
 class Tree
 {
     public:
-        TreeNode *root;                 //TreeªºRoot
+        TreeNode *root;                 //Treeçš„Root
         Tree();                         //Constructor
         ~Tree();                        //Destructor
-        int Node_count(TreeNode *current);				///­pºâTree¤ºÁ`¦@¦³´X­ÓNode 
-        void Infix(TreeNode *current, int count);                  //infix traversal ¦L¥X¸`ÂIªºData
-        void Infix_l(TreeNode *current, int count);                //infix traversal ¦L¥X¸`ÂIªºleftchild
-        void Infix_r(TreeNode *current, int count);                //infix traversal ¦L¥X¸`ÂIªºrightchild
-        TreeNode* Search(Tree *tree, int target);       //·j´M¾ğ¤ºtarget¼Æ­È ¨Ã¶Ç¦^¨ä¦ì¸m
-        TreeNode* Get_parent(Tree *tree, int target);   //¨ú±o¾ğ¤º¬Y­Ó¼Æ­Èªº¸`ÂIªºparent
-        void Insert(Tree *tree, int num);               //±N¼Æ­Èinsert¶iBST¤º¡A°²­Y¤w¸g¦s¦b¸Ó¼Æ­È¡A«hdelete
-        void Delete(Tree *tree, int num);               //§R°£¬Y­Ó¼Æ­Èªº¸`ÂI
+        int Node_count(TreeNode *current);				///è¨ˆç®—Treeå…§ç¸½å…±æœ‰å¹¾å€‹Node
+        void Infix(TreeNode *current, int count);                  //infix traversal å°å‡ºç¯€é»çš„Data
+        void Infix_l(TreeNode *current, int count);                //infix traversal å°å‡ºç¯€é»çš„leftchild
+        void Infix_r(TreeNode *current, int count);                //infix traversal å°å‡ºç¯€é»çš„rightchild
+        TreeNode* Search(Tree *tree, int target);       //æœå°‹æ¨¹å…§targetæ•¸å€¼ ä¸¦å‚³å›å…¶ä½ç½®
+        TreeNode* Get_parent(Tree *tree, int target);   //å–å¾—æ¨¹å…§æŸå€‹æ•¸å€¼çš„ç¯€é»çš„parent
+        void Insert(Tree *tree, int num);               //å°‡æ•¸å€¼inserté€²BSTå…§ï¼Œå‡è‹¥å·²ç¶“å­˜åœ¨è©²æ•¸å€¼ï¼Œå‰‡delete
+        void Delete(Tree *tree, int num);               //åˆªé™¤æŸå€‹æ•¸å€¼çš„ç¯€é»
 
     private:
 
@@ -70,7 +70,7 @@ int Tree::Node_count(TreeNode *current){
         Node_count(current->rightChild);
     }
     return count;
-}		
+}
 
 void Tree::Infix(TreeNode *current, int count){
     if(current != NULL){
@@ -161,13 +161,13 @@ void Tree::Insert(Tree *tree, int num)
 {
     TreeNode *current, *prev;
     current = tree->root;
-    
+
     TreeNode *newnode = new TreeNode;
     newnode->data = num;
     newnode->leftChild = NULL;
 	newnode->rightChild = NULL;
 
-    if(Search(tree, num))              //§PÂ_±ıinsertªº¼Æ­È¬O§_¤w¸g¦s¦b©ó¾ğ¤º¡A°²­Y¦s¦b«hdelete
+    if(Search(tree, num))              //åˆ¤æ–·æ¬²insertçš„æ•¸å€¼æ˜¯å¦å·²ç¶“å­˜åœ¨æ–¼æ¨¹å…§ï¼Œå‡è‹¥å­˜åœ¨å‰‡delete
     {
         Delete(tree, num);
         //cout << "delete" << endl;
@@ -176,14 +176,14 @@ void Tree::Insert(Tree *tree, int num)
 
     else
     {
-        if(tree->root->data == NULL)      //´¡¤J¼Æ­È¨ìrootªº±¡ªp
+        if(tree->root->data == NULL)      //æ’å…¥æ•¸å€¼åˆ°rootçš„æƒ…æ³
         {
             tree->root = newnode;
             //cout << "root - insert" << endl;
         }
 
 
-        while(current != NULL)      //¨«¨ì­ninsert¼Æ­Èªº¸`ÂI¦ì¸m
+        while(current != NULL)      //èµ°åˆ°è¦insertæ•¸å€¼çš„ç¯€é»ä½ç½®
         {
             prev = current;
             if(num < current->data)
@@ -192,13 +192,13 @@ void Tree::Insert(Tree *tree, int num)
                 current = current->rightChild;
         }
 
-        if(newnode->data < prev->data)  //insert¨ìleftchildªº±¡ªp
+        if(newnode->data < prev->data)  //insertåˆ°leftchildçš„æƒ…æ³
         {
             prev->leftChild = newnode;
             cout << "insert left " << newnode->data << endl;
         }
 
-        else                            //insert¨ìrightchildªº±¡ªp
+        else                            //insertåˆ°rightchildçš„æƒ…æ³
         {
             prev->rightChild = newnode;
             cout << "insert right " << newnode->data << endl;
@@ -213,9 +213,9 @@ void Tree::Delete(Tree *tree, int num){
     TreeNode *parent = Get_parent(tree, num);
 
 
-    //¸`ÂI¬°Leaf Node (¥]¬A¥u¦³rootªº±¡ªp)
+    //ç¯€é»ç‚ºLeaf Node (åŒ…æ‹¬åªæœ‰rootçš„æƒ…æ³)
     if(deletenode->leftChild == NULL && deletenode->rightChild == NULL){
-        if(deletenode == tree->root)    //¤G¤¸¾ğ¥u¦³¾ğ®Ú,¥B§R°£¾ğ®Ú
+        if(deletenode == tree->root)    //äºŒå…ƒæ¨¹åªæœ‰æ¨¹æ ¹,ä¸”åˆªé™¤æ¨¹æ ¹
             tree->root->data = NULL;
 
         else{
@@ -228,8 +228,8 @@ void Tree::Delete(Tree *tree, int num){
     }
 
     else{
-        //±ı§R°£ªºnonleaf node¥u¦³¤@­Óson¡Gª½±µ±N¸Ónode§R°£¡A¨Ã±N¥¦ªºsonª½±µ©¹¤W³s±µ
-        if(deletenode->leftChild != NULL && deletenode->rightChild == NULL) //¥u¦³¥ªson
+        //æ¬²åˆªé™¤çš„nonleaf nodeåªæœ‰ä¸€å€‹sonï¼šç›´æ¥å°‡è©²nodeåˆªé™¤ï¼Œä¸¦å°‡å®ƒçš„sonç›´æ¥å¾€ä¸Šé€£æ¥
+        if(deletenode->leftChild != NULL && deletenode->rightChild == NULL) //åªæœ‰å·¦son
         {
             if(num < parent->data)
             {
@@ -244,7 +244,7 @@ void Tree::Delete(Tree *tree, int num){
             delete deletenode;
         }
 
-        else if(deletenode->leftChild == NULL && deletenode->rightChild != NULL)  //¥u¦³¥kson
+        else if(deletenode->leftChild == NULL && deletenode->rightChild != NULL)  //åªæœ‰å³son
         {
             if(num < parent->data)
             {
@@ -259,8 +259,8 @@ void Tree::Delete(Tree *tree, int num){
             delete deletenode;
         }
 
-        //±ı§R°£ªºnonleaf node¦³¨â­Óson¡G°²³]±ı§R°£ªºnode¬°p¡A«h§äpªºright subtree¤¤¡A³Ì¾a¥ªªºnode q¡]§Yp¤§inorder successor¡^¡A
-        //±Nqª½±µ©ñ¸m©óp¤§¦ì¸m¡A¦Ó±Nqªºson¡]q¥u·|¦³right son¡^¦V¤W³s±µ°_¨Ó§Y¥i
+        //æ¬²åˆªé™¤çš„nonleaf nodeæœ‰å…©å€‹sonï¼šå‡è¨­æ¬²åˆªé™¤çš„nodeç‚ºpï¼Œå‰‡æ‰¾pçš„right subtreeä¸­ï¼Œæœ€é å·¦çš„node qï¼ˆå³pä¹‹inorder successorï¼‰ï¼Œ
+        //å°‡qç›´æ¥æ”¾ç½®æ–¼pä¹‹ä½ç½®ï¼Œè€Œå°‡qçš„sonï¼ˆqåªæœƒæœ‰right sonï¼‰å‘ä¸Šé€£æ¥èµ·ä¾†å³å¯
         else
         {
             TreeNode *q = deletenode->rightChild;
@@ -271,10 +271,10 @@ void Tree::Delete(Tree *tree, int num){
                 q = q->leftChild;
             }
 
-            if(deletenode->leftChild != q)          //¤@¯ë±¡ªp
+            if(deletenode->leftChild != q)          //ä¸€èˆ¬æƒ…æ³
             q->leftChild = deletenode->leftChild;
-            else                                    //°²­Yinorder successor´N¬Odelete¥Ø¼Ğ¸`ÂIªºleftchildªº±¡ªp
-            q->leftChild = NULL;                    //inorder successor±N¤£·|¦³leftchild
+            else                                    //å‡è‹¥inorder successorå°±æ˜¯deleteç›®æ¨™ç¯€é»çš„leftchildçš„æƒ…æ³
+            q->leftChild = NULL;                    //inorder successorå°‡ä¸æœƒæœ‰leftchild
             q->rightChild = deletenode->rightChild;
 
 
@@ -284,7 +284,7 @@ void Tree::Delete(Tree *tree, int num){
 
             if(deletenode == tree->root)
                 root = q;
-                
+
             delete deletenode;
         }
     }
@@ -295,7 +295,7 @@ void Tree::Delete(Tree *tree, int num){
 
 int main()
 {
-	
+
     int n;
     while(cin >> n)
 	{
@@ -308,11 +308,11 @@ int main()
 	        break;
 	        tree.Insert(&tree, n);
 	    }
-		
+
 	    //cout << "node: ";
 	    //tree.Node_count(tree.root);
-		//cout << "Node_count :" << count << endl; 
-		//cout << tree.root->data << " " << tree.root->leftChild->data << " " << tree.root->rightChild->data << " " <<  tree.root->rightChild->rightChild->data;  
+		//cout << "Node_count :" << count << endl;
+		//cout << tree.root->data << " " << tree.root->leftChild->data << " " << tree.root->rightChild->data << " " <<  tree.root->rightChild->rightChild->data;
 	    tree.Infix(tree.root, 10);
 	    //cout << tree.root->leftChild->data;
 	    /*
@@ -335,5 +335,3 @@ int main()
 	}
     system("PAUSE");
 }
-
-

@@ -26,45 +26,45 @@ int main(){
 			printf("Friday\n");
 			if(of_the_week(yy, mm, dd) == 6)
 			printf("Saturday\n");
-			
-	}	
-} 
+
+	}
+}
 
 void determine_date(int* yy, int* mm, int* dd){
-		
+
 	if(*yy != 2012)
 	*yy = 2012;
-	
+
 	while(*mm < 1 | *mm > 12){
-	printf("¤ë¥÷¿é¤J¿ù»~¡A½Ğ­«·s¿é¤J\n");
+	printf("æœˆä»½è¼¸å…¥éŒ¯èª¤ï¼Œè«‹é‡æ–°è¼¸å…¥\n");
 	int temp;
 	scanf("%d", &temp);
 	*mm = temp;
-	}	
-	
+	}
+
 	while(*dd < 1 || *dd > monthday[*mm]){
-	printf("¤é´Á¿é¤J¿ù»~¡A½Ğ­«·s¿é¤J\n");
+	printf("æ—¥æœŸè¼¸å…¥éŒ¯èª¤ï¼Œè«‹é‡æ–°è¼¸å…¥\n");
 	int temp;
 	scanf("%d", &temp);
 	*dd = temp;
 	}
-	
+
 }
 int of_the_week(int yy, int mm, int dd){
 	int year[367];
 		int i;
 		int firstday = 0;
-	 	for(i = 1 ; i <= 366; ++i){    //±Àºâ¥X2012¦~²Ä´X¤Ñ¬°¬P´Á´X¨Ã¦s¤J°}¦C¤¤ 
+	 	for(i = 1 ; i <= 366; ++i){    //æ¨ç®—å‡º2012å¹´ç¬¬å¹¾å¤©ç‚ºæ˜ŸæœŸå¹¾ä¸¦å­˜å…¥é™£åˆ—ä¸­
 			year[i] = firstday % 7;
 			++firstday;
 	 	}
-	 	
+
 	int monthday[13] = {0,31,29,31,30,31,30,31,31,30,31,30,31};
 	int whatday = 0;
 		for(i = 1 ; i < mm; ++i)
 		whatday += monthday[i];
 		whatday += dd;
 		return year[whatday];
-	
-	 	
+
+
 }

@@ -11,13 +11,13 @@ int main(){
 		FILE *output;
 		output = fopen("output7.txt","w");
 			if(determine_condition(m,n) == 0){
-			printf("¿é¤J¤£²Å¦X³W½d(ÄÝ©ó¤j©ó4ªº°¸¼Æ)¡A½Ð­«·s¿é¤J\n");
+			printf("è¼¸å…¥ä¸ç¬¦åˆè¦ç¯„(å±¬æ–¼å¤§æ–¼4çš„å¶æ•¸)ï¼Œè«‹é‡æ–°è¼¸å…¥\n");
 			continue;
 			}
-			
+
 			if(m > n)
 			swap(&m,&n);
-			
+
 			int i;
 			for(i = m ; i <= n ; i = i + 2){
 				int j;

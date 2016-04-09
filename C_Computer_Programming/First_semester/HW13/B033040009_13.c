@@ -23,7 +23,7 @@
 //
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //
-//              ¦ò¯ª«O¦ö         ¥ÃµLBUG 
+//              ä½›ç¥–ä¿ä½‘         æ°¸ç„¡BUG
 //
 //
 //
@@ -34,15 +34,15 @@ int main(){
 	int n;
 	while(scanf("%d",&n)){
 		if(n < 10 || n > 50){
-		printf("¿é¤J¤£¦Xªk¡AÀ³¤¶©ó10~50¤§¶¡¡A½Ğ­«·s¿é¤J\n");
+		printf("è¼¸å…¥ä¸åˆæ³•ï¼Œæ‡‰ä»‹æ–¼10~50ä¹‹é–“ï¼Œè«‹é‡æ–°è¼¸å…¥\n");
 		continue;
 		}
-		
+
 	FILE *output;
 	output = fopen("output1.txt","w");
 	int a[3][50];
 	srand(15);
-	
+
 	int i , j;
 		for(i = 0 ; i < 3 ; ++i)
 			for(j = 0 ; j < n ; ++j){
@@ -53,10 +53,10 @@ int main(){
 				}while(t == 0);
 			}
 	// bubble sort
-	time_t start_tm, finish_tm; 
-  	time(&start_tm); 
+	time_t start_tm, finish_tm;
+  	time(&start_tm);
   	fprintf(output,"Bubble Sort\n");
-	fprintf(output,"±Æ§Ç«e : ");
+	fprintf(output,"æ’åºå‰ : ");
 	for(j = 0 ; j < n ; ++j)
 	fprintf(output,"%d ", a[0][j]);
 	fprintf(output,"\n");
@@ -66,18 +66,18 @@ int main(){
                 swap(&a[0][i], &a[0][j]);
         	}
     	}
-    fprintf(output,"±Æ§Ç«á : ");
+    fprintf(output,"æ’åºå¾Œ : ");
     for(j = 0 ; j < n ; ++j)
 	fprintf(output,"%d ", a[0][j]);
 	fprintf(output,"\n");
-	time(&finish_tm); 
-  	double elapsed_tm=difftime(finish_tm,start_tm); 
-  	fprintf(output,"¹Bºâ®É¶¡ : %d s\n", elapsed_tm);
-  	
-  	// Selection Sort 
-  	time(&start_tm); 
+	time(&finish_tm);
+  	double elapsed_tm=difftime(finish_tm,start_tm);
+  	fprintf(output,"é‹ç®—æ™‚é–“ : %d s\n", elapsed_tm);
+
+  	// Selection Sort
+  	time(&start_tm);
   	fprintf(output,"Selection Sort \n");
-	fprintf(output,"±Æ§Ç«e : ");
+	fprintf(output,"æ’åºå‰ : ");
 	for(j = 0 ; j < n ; ++j)
 	fprintf(output,"%d ", a[1][j]);
 	fprintf(output,"\n");
@@ -85,35 +85,35 @@ int main(){
         for (j=i+1; j<n; j++)
             if (a[1][i]>a[1][j])
                 swap(&a[1][i], &a[1][j]);
-    fprintf(output,"±Æ§Ç«á : ");
+    fprintf(output,"æ’åºå¾Œ : ");
     for(j = 0 ; j < n ; ++j)
 	fprintf(output,"%d ", a[1][j]);
 	fprintf(output,"\n");
-	time(&finish_tm); 
-  	elapsed_tm=difftime(finish_tm,start_tm); 
-  	fprintf(output,"¹Bºâ®É¶¡ : %d s\n", elapsed_tm);
-  	
-  	//Insertion Sort 
-  	time(&start_tm); 
+	time(&finish_tm);
+  	elapsed_tm=difftime(finish_tm,start_tm);
+  	fprintf(output,"é‹ç®—æ™‚é–“ : %d s\n", elapsed_tm);
+
+  	//Insertion Sort
+  	time(&start_tm);
   	fprintf(output,"Insertion Sort \n");
-	fprintf(output,"±Æ§Ç«e : ");
+	fprintf(output,"æ’åºå‰ : ");
 	for(j = 0 ; j < n ; ++j)
 	fprintf(output,"%d ", a[2][j]);
 	fprintf(output,"\n");
   		for (i = 1; i <= n; i++){
-			int temp = a[2][i]; 
-			for(j = i - 1; j >= 0 && a[2][j] > temp; j--) 
+			int temp = a[2][i];
+			for(j = i - 1; j >= 0 && a[2][j] > temp; j--)
 				a[2][j + 1] = a[2][j];
-			a[2][j + 1] = temp; 
+			a[2][j + 1] = temp;
 		}
-	fprintf(output,"±Æ§Ç«á : ");
+	fprintf(output,"æ’åºå¾Œ : ");
     for(j = 0 ; j < n ; ++j)
 	fprintf(output,"%d ", a[2][j]);
 	fprintf(output,"\n");
-	time(&finish_tm); 
-  	elapsed_tm=difftime(finish_tm,start_tm); 
-  	fprintf(output,"¹Bºâ®É¶¡ : %d s\n", elapsed_tm);
-  	
+	time(&finish_tm);
+  	elapsed_tm=difftime(finish_tm,start_tm);
+  	fprintf(output,"é‹ç®—æ™‚é–“ : %d s\n", elapsed_tm);
+
 	fclose(output);
 	}
 }
@@ -125,9 +125,9 @@ void swap (int *a, int *b){
 	*b = temp;
 }
 
-/* 
+/*
                                  |~~~~~~~|
-                                 |       |	
+                                 |       |
                                  |       |
                                  |       |
                                  |       |
@@ -135,10 +135,10 @@ void swap (int *a, int *b){
       |~.\\\_\~~~~~~~~~~~~~~xx~~~         ~~~~~~~~~~~~~~~~~~~~~/_//;~|
       |  \  o \_         ,XXXXX),                         _..-~ o /  |
       |    ~~\  ~-.     XXXXX`)))),                 _.--~~   .-~~~   |
-       ~~~~~~~`\   ~\~~~XXX' _/ ';))     |~~~~~~..-~     _.-~ ~~~~~~~ 
+       ~~~~~~~`\   ~\~~~XXX' _/ ';))     |~~~~~~..-~     _.-~ ~~~~~~~
                 `\   ~~--`_\~\, ;;;\)__.---.~~~      _.-~
                   ~-.       `:;;/;; \          _..-~~
-                     ~-._      `''        /-~-~ 
+                     ~-._      `''        /-~-~
                          `\              /  /
                            |         ,   | |
                             |  '        /  |
@@ -148,13 +148,13 @@ void swap (int *a, int *b){
                               |~~~-----.....|
                              | \             \
                             | /\~~--...__    |
-                            (|  `\       __-\|  
+                            (|  `\       __-\|
                             ||    \_   /~    |
                             |)     \~-'      |
                              |      | \      '
                              |      |  \    :
                               \     |  |    |
-                               |    )  (    ) 
+                               |    )  (    )
                                 \  /;  /\  |
                                 |    |/   |
                                 |    |   |
@@ -168,5 +168,5 @@ void swap (int *a, int *b){
                                  |       |
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-                      ­C¿q«O¦ö                ¥ÃµL BUG
+                      è€¶ç©Œä¿ä½‘                æ°¸ç„¡ BUG
 */
