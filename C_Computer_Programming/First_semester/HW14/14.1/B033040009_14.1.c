@@ -24,7 +24,7 @@
 //
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //
-//              ¦ò¯ª«O¦ö         ¥ÃµLBUG 
+//              ä½›ç¥–ä¿ä½‘         æ°¸ç„¡BUG
 //
 //
 //
@@ -49,79 +49,79 @@ int main(){
 				--point;
 				char command[4];
 				int target;
-				
+
 				while(fscanf(input,"%s%d",command,&target) != EOF){
-									
-					
+
+
 					if(strcmp(command,"Push") == 0){
 						/*
 						stack[point + 1] = target;
 						++point;
 						check_num[target] = 1;
 						*/
-						
-						
+
+
 						if(check_num[target] == 1){
-						printf("­«½Æªº¼Æ¦r¤è¶ô\n");
+						printf("é‡è¤‡çš„æ•¸å­—æ–¹å¡Š\n");
 						break;
 						}
 						else{
 							if(point >= 4){
-							printf("½c¤l¤wº¡\n");
+							printf("ç®±å­å·²æ»¿\n");
 							break;
 							}
-							
+
 							else{
 							stack[point + 1] = target;
 							++point;
 							check_num[target] = 1;
 							}
 						}
-						
+
 					}
-					
+
 					if(strcmp(command,"Pop") == 0){
 						/*
 						--point;
 						check_num[target] = 0;
 						*/
-						
-						
+
+
 						if(check_num[target] != 1){
-						printf("µL¦¹¼Æ¦r¤è¶ô\n");
+						printf("ç„¡æ­¤æ•¸å­—æ–¹å¡Š\n");
 						break;
 						}
-						
+
 						else{
 							if(stack[point] != target){
-							printf("¤£¬O³Ì«á©ñ¶i¥hªº¼Æ¦r¤è¶ô\n");
+							printf("ä¸æ˜¯æœ€å¾Œæ”¾é€²å»çš„æ•¸å­—æ–¹å¡Š\n");
 							break;
 							}
-							
+
 							else{
 							--point;
 							check_num[target] = 0;
 							}
 						}
-						
+
 					}
-					
-					
+
+
 				}
-				
-				printf("½c¤l¸Ìªº¼Æ¦r¤è¶ô : ");
+
+				printf("ç®±å­è£¡çš„æ•¸å­—æ–¹å¡Š : ");
 				int i;
 				for(i = 0 ; i <= point ; ++i)
 					printf("%d ", stack[i]);
 				printf("\n");
-				
+
 	fclose(input);
 	system("PAUSE");
 }
 
-/* 
+/*
                                  |~~~~~~~|
-                                 |       |	
+                                 |       |
                                  |       |
                                  |       |
                                  |       |
@@ -129,10 +129,10 @@ int main(){
       |~.\\\_\~~~~~~~~~~~~~~xx~~~         ~~~~~~~~~~~~~~~~~~~~~/_//;~|
       |  \  o \_         ,XXXXX),                         _..-~ o /  |
       |    ~~\  ~-.     XXXXX`)))),                 _.--~~   .-~~~   |
-       ~~~~~~~`\   ~\~~~XXX' _/ ';))     |~~~~~~..-~     _.-~ ~~~~~~~ 
+       ~~~~~~~`\   ~\~~~XXX' _/ ';))     |~~~~~~..-~     _.-~ ~~~~~~~
                 `\   ~~--`_\~\, ;;;\)__.---.~~~      _.-~
                   ~-.       `:;;/;; \          _..-~~
-                     ~-._      `''        /-~-~ 
+                     ~-._      `''        /-~-~
                          `\              /  /
                            |         ,   | |
                             |  '        /  |
@@ -142,13 +142,13 @@ int main(){
                               |~~~-----.....|
                              | \             \
                             | /\~~--...__    |
-                            (|  `\       __-\|  
+                            (|  `\       __-\|
                             ||    \_   /~    |
                             |)     \~-'      |
                              |      | \      '
                              |      |  \    :
                               \     |  |    |
-                               |    )  (    ) 
+                               |    )  (    )
                                 \  /;  /\  |
                                 |    |/   |
                                 |    |   |
@@ -162,5 +162,5 @@ int main(){
                                  |       |
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-                      ­C¿q«O¦ö                ¥ÃµL BUG
+                      è€¶ç©Œä¿ä½‘                æ°¸ç„¡ BUG
 */

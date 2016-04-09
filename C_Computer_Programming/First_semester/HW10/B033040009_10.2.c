@@ -3,25 +3,25 @@
 #define LOTTERY_NUM 7
 
 int main(){
-	
+
 	FILE *in, *out;
 	in = fopen("Input1.txt","r");
 	out = fopen("Output2.txt", "w");
 
 	int i;
-	int lot[7]; 
-	int player[7];	
-	
-		
+	int lot[7];
+	int player[7];
+
+
 		for(i = 0 ; i < LOTTERY_NUM; ++i){
 			int temp;
 			fscanf(in, "%d" , &temp);
 			lot[i] = temp;
 			if(temp > 49 | temp < 1)
-			printf("¿é¤J¶W¥X½d³ò!! ¿é¤JÀ³¤¶©ó1~49¤§¶¡ ½Ð­«·s¿é¤J\n");
+			printf("è¼¸å…¥è¶…å‡ºç¯„åœ!! è¼¸å…¥æ‡‰ä»‹æ–¼1~49ä¹‹é–“ è«‹é‡æ–°è¼¸å…¥\n");
 		}
-		
-		srand(time(NULL)); 
+
+		srand(time(NULL));
 		int num[50] = {0};
 		for(i = 0 ; i < LOTTERY_NUM; ++i){
 			player[i] = rand() % 50;
@@ -30,14 +30,14 @@ int main(){
 			continue;
 			}
 			num[player[i]] = 1;
-		}	
-		//fprintf(out,"±o¼ú¸¹½X : %d %d %d %d %d %d %d\n", lot[0],lot[1],lot[2],lot[3],lot[4],lot[5],lot[6]);
-		fprintf(out,"§ëª`¸¹½X : %d %d %d %d %d %d %d\n", player[0],player[1],player[2],player[3],player[4],player[5],player[6]);
-		
-		int matchcount = 0, specialmatch = 0; //³]©w¨â­ÓÅÜ¼Æ ­pºâ¹ï¤¤ªº¼ú¸¹¼Æ¶q¥H¤Î¯S§O¸¹¹ï¤¤»P§_ 
+		}
+		//fprintf(out,"å¾—çŽè™Ÿç¢¼ : %d %d %d %d %d %d %d\n", lot[0],lot[1],lot[2],lot[3],lot[4],lot[5],lot[6]);
+		fprintf(out,"æŠ•æ³¨è™Ÿç¢¼ : %d %d %d %d %d %d %d\n", player[0],player[1],player[2],player[3],player[4],player[5],player[6]);
+
+		int matchcount = 0, specialmatch = 0; //è¨­å®šå…©å€‹è®Šæ•¸ è¨ˆç®—å°ä¸­çš„çŽè™Ÿæ•¸é‡ä»¥åŠç‰¹åˆ¥è™Ÿå°ä¸­èˆ‡å¦
 			if(lot[6] == player[6])
 			specialmatch = 1;
-			
+
 			int m, n;
 			for(m = 0 ; m < LOTTERY_NUM-1; ++m){
 				for(n = 0; n < LOTTERY_NUM-1; ++n){
@@ -46,38 +46,38 @@ int main(){
 				}
 			}
 		if(matchcount < 3)
-		fprintf(out,"¨S¤¤¼ú!!\n");
-		
-		
-		
+		fprintf(out,"æ²’ä¸­çŽ!!\n");
+
+
+
 		if(matchcount == 6)
-		fprintf(out,"¤¤¼ú !! ¤¤ÀY¼ú\n");
+		fprintf(out,"ä¸­çŽ !! ä¸­é ­çŽ\n");
 		else{
 			if(specialmatch == 1){
 				if(matchcount == 5)
-				fprintf(out,"¤¤¼ú !! ¤¤¶L¼ú\n");
-				
+				fprintf(out,"ä¸­çŽ !! ä¸­è²³çŽ\n");
+
 				if(matchcount == 4)
-				fprintf(out,"¤¤¼ú !! ¤¤¸v¼ú\n");
-				
+				fprintf(out,"ä¸­çŽ !! ä¸­è‚†çŽ\n");
+
 				if(matchcount == 3)
-				fprintf(out,"¤¤¼ú !! ¤¤³°¼ú\n");
-				
+				fprintf(out,"ä¸­çŽ !! ä¸­é™¸çŽ\n");
+
 			}
-			
+
 			if(specialmatch == 0){
 				if(matchcount == 5)
-				fprintf(out,"¤¤¼ú !! ¤¤°Ñ¼ú\n");
-				
+				fprintf(out,"ä¸­çŽ !! ä¸­åƒçŽ\n");
+
 				if(matchcount == 4)
-				fprintf(out,"¤¤¼ú !! ¤¤¥î¼ú\n");
-				
+				fprintf(out,"ä¸­çŽ !! ä¸­ä¼çŽ\n");
+
 				if(matchcount == 3)
-				fprintf(out,"¤¤¼ú !! ¤¤´¶¼ú\n");
+				fprintf(out,"ä¸­çŽ !! ä¸­æ™®çŽ\n");
 			}
 		}
 		fclose(in);
 		fclose(out);
-		
-	
-} 
+
+
+}

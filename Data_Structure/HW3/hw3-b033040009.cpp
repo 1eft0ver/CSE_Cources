@@ -1,7 +1,7 @@
 /*
-Author¡G½²©y¾± B033040009
-Date¡GNov. 2, 2015
-Purpose:¦è¬v´ÑÃM¤h(knight)¨«§¹´Ñ½Lªº¶¶§Ç
+Authorï¼šè”¡å®œå‹³ B033040009
+Dateï¼šNov. 2, 2015
+Purpose:è¥¿æ´‹æ£‹é¨å£«(knight)èµ°å®Œæ£‹ç›¤çš„é †åº
 */
 
 #include<stdio.h>
@@ -10,16 +10,16 @@ Purpose:¦è¬v´ÑÃM¤h(knight)¨«§¹´Ñ½Lªº¶¶§Ç
 
 using namespace std;
 
-typedef struct Node{		//¨Ï¥ÎStructure¼¶¼gStack 
-	struct Node *prev;		//«ü¦V«e¤@­ÓNodeªºpointer 
-	struct Node *next;		//«ü¦V«á¤@­ÓNodeªºpointer 
-	int _x;					//©ó´Ñ½L¤Wªºx®y¼Ğ­È (j) 
-	int _y;					//©ó´Ñ½L¤Wªºy®y¼Ğ­È (i) 
-	int _k;					//²¾°Ê¤è¦V (k1~k8) 
-	int _now_step;			//¬ö¿ı²{¦b¬°²Ä´X¨B 
+typedef struct Node{		//ä½¿ç”¨Structureæ’°å¯«Stack
+	struct Node *prev;		//æŒ‡å‘å‰ä¸€å€‹Nodeçš„pointer
+	struct Node *next;		//æŒ‡å‘å¾Œä¸€å€‹Nodeçš„pointer
+	int _x;					//æ–¼æ£‹ç›¤ä¸Šçš„xåº§æ¨™å€¼ (j)
+	int _y;					//æ–¼æ£‹ç›¤ä¸Šçš„yåº§æ¨™å€¼ (i)
+	int _k;					//ç§»å‹•æ–¹å‘ (k1~k8)
+	int _now_step;			//ç´€éŒ„ç¾åœ¨ç‚ºç¬¬å¹¾æ­¥
 }Node;
 
-void Push(Node** first,int x,int y,int k,int now_step){		//StackªºPush¾Ş§@ 
+void Push(Node** first,int x,int y,int k,int now_step){		//Stackçš„Pushæ“ä½œ
 	Node *tmp = (Node*)malloc(sizeof(Node));
 	tmp -> _x = x;
 	tmp -> _y = y;
@@ -38,7 +38,7 @@ void Push(Node** first,int x,int y,int k,int now_step){		//StackªºPush¾Ş§@
 	}
 }
 
-int Pop(Node** first){										//StackªºPop¾Ş§@¡APop¥Xk 
+int Pop(Node** first){										//Stackçš„Popæ“ä½œï¼ŒPopå‡ºk
 	if((*first) == NULL)
 		return 0;
 	else{
@@ -57,25 +57,25 @@ int Pop(Node** first){										//StackªºPop¾Ş§@¡APop¥Xk
 
 int main(){
 
-    int n; 
-    while(cin >> n)				
-    {	
-    	n--;					//¥Ñ©ó°}¦C¯Á¤Ş¬O¥Ñ0¶}©l¡A¦]¦¹¥²¶·±N¿é¤J¤§n­È¥ı´î¤@¦A°µ³B²z 
-    	Node *top = NULL;		//Stack 
-		int sol = 1;			//¥Î¥H§PÂ_¬O§_¦³¸ÑªºÅÜ¼Æ 
-		int now_step = 2, all_step = (n + 1) * (n + 1);	 //now_step¬°²{¦b¨B¼Æ(¦]¬°¥ª¤W¨¤¬°°_ÂI¡A¦]¦¹²Ä¤@¨B¤§now_step­È¥²µM¬°2)¡A all_step¬°Ãäªønªº´Ñ½LÁ`³Ì¦h¥i¥H¨«´X¨B 
-    	int x = 0, y = 0;								 //²{¦bªºx, y®y¼Ğ 
-    	int chessboard[6][6];							 //¥Î¥H¥Nªí´Ñ½Lªº¤Gºû°}¦C¡A¨ÌÃD¥Ø³W©w¤W­­³]¬°6 
-    	for(int a = 0 ; a < 6 ; ++a)					 //ªì©l¤Æ¤G·L°}¦C 
+    int n;
+    while(cin >> n)
+    {
+    	n--;					//ç”±æ–¼é™£åˆ—ç´¢å¼•æ˜¯ç”±0é–‹å§‹ï¼Œå› æ­¤å¿…é ˆå°‡è¼¸å…¥ä¹‹nå€¼å…ˆæ¸›ä¸€å†åšè™•ç†
+    	Node *top = NULL;		//Stack
+		int sol = 1;			//ç”¨ä»¥åˆ¤æ–·æ˜¯å¦æœ‰è§£çš„è®Šæ•¸
+		int now_step = 2, all_step = (n + 1) * (n + 1);	 //now_stepç‚ºç¾åœ¨æ­¥æ•¸(å› ç‚ºå·¦ä¸Šè§’ç‚ºèµ·é»ï¼Œå› æ­¤ç¬¬ä¸€æ­¥ä¹‹now_stepå€¼å¿…ç„¶ç‚º2)ï¼Œ all_stepç‚ºé‚Šé•·nçš„æ£‹ç›¤ç¸½æœ€å¤šå¯ä»¥èµ°å¹¾æ­¥
+    	int x = 0, y = 0;								 //ç¾åœ¨çš„x, yåº§æ¨™
+    	int chessboard[6][6];							 //ç”¨ä»¥ä»£è¡¨æ£‹ç›¤çš„äºŒç¶­é™£åˆ—ï¼Œä¾é¡Œç›®è¦å®šä¸Šé™è¨­ç‚º6
+    	for(int a = 0 ; a < 6 ; ++a)					 //åˆå§‹åŒ–äºŒå¾®é™£åˆ—
     		for(int b = 0 ; b < 6 ; ++b)
     		chessboard[a][b] = 0;
-        chessboard[0][0] = 1;							 //±N¥ª¤W¨¤³]¬°°_ÂI 
-        for(int k = 1 ; now_step <= all_step ; k++)		
+        chessboard[0][0] = 1;							 //å°‡å·¦ä¸Šè§’è¨­ç‚ºèµ·é»
+        for(int k = 1 ; now_step <= all_step ; k++)
         {
-            if(sol == 0)								 //°²­YµL¸Ñ¡A¸õ¥X°j°é 
+            if(sol == 0)								 //å‡è‹¥ç„¡è§£ï¼Œè·³å‡ºè¿´åœˆ
                 break;
-			
-            if( k == 1 && chessboard[x+1][y-2] == 0 && x + 1 <= n && y-2 >= 0)		//°w¹ï¦U¤è¦V¦æ¨«ªº±¡ªp°µ³B²z¡A¥H¤Î§PÂ_¬O§_·|¨«¥X´Ñ½L 
+
+            if( k == 1 && chessboard[x+1][y-2] == 0 && x + 1 <= n && y-2 >= 0)		//é‡å°å„æ–¹å‘è¡Œèµ°çš„æƒ…æ³åšè™•ç†ï¼Œä»¥åŠåˆ¤æ–·æ˜¯å¦æœƒèµ°å‡ºæ£‹ç›¤
             {
                 Push(&top, x, y, k, now_step);
                 chessboard[x+1][y-2] = now_step;
@@ -147,10 +147,10 @@ int main(){
                 y = y - 2;
                 k = 0;
             }
-            else if(k>=9)					//¥NªíµL¸ô¥i¨«¡A¤K­Ó¤è¦V³£¨«¹L¤F¡A¦]¦¹pop¦^¤W¤@¨B¦A°µ¹Á¸Õ 
+            else if(k>=9)					//ä»£è¡¨ç„¡è·¯å¯èµ°ï¼Œå…«å€‹æ–¹å‘éƒ½èµ°éäº†ï¼Œå› æ­¤popå›ä¸Šä¸€æ­¥å†åšå˜—è©¦
             {
             	now_step--;
-                int top_k = 1;                
+                int top_k = 1;
                 top_k = Pop(&top);
                 chessboard[x][y] = 0;
                 if(top_k == 0)
@@ -198,13 +198,13 @@ int main(){
                     y += 2;
                 }
             }
-            else if(now_step > all_step)			//¨«§¹©Ò¦³®æ¤lªº±¡ªp¡AÂ÷¶}°j°é 
+            else if(now_step > all_step)			//èµ°å®Œæ‰€æœ‰æ ¼å­çš„æƒ…æ³ï¼Œé›¢é–‹è¿´åœˆ
                 break;
         }
-        if(sol == 0)								//µL¸Ñ 
+        if(sol == 0)								//ç„¡è§£
             printf("No solution.\n");
-            
-        else if(now_step > all_step)				// ¨«§¹©Ò¦³®æ¤l¤F¡A¬G¦³¸Ñ¡A¿é¥X¸Ñ 
+
+        else if(now_step > all_step)				// èµ°å®Œæ‰€æœ‰æ ¼å­äº†ï¼Œæ•…æœ‰è§£ï¼Œè¼¸å‡ºè§£
             for(int j = 0; j < n + 1; j++)
             {
                 for(int i = 0; i < n + 1; i++)
@@ -218,5 +218,5 @@ int main(){
                     chessboard[i][j] = 0;
             }
     }
-    
+
 }

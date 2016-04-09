@@ -1,7 +1,7 @@
 /*
-Author¡G½²©y¾± B033040009
-Date¡GOct. 19, 2015
-Purpose¡G¥HC++»s§@¤@­Ó¡u¶°¦X¡vÃş§O (set class)¡A¨Ï¨ä¯à¶i¦æ¡uÄİ©ó¡v¡B¡uÁp¶°¡v¡B¡u¥æ¶°¡v¡B¡u®t¶°¡v¡B¡u¥]§t¡vµ¥¤­ºØ¹Bºâ¡C
+Authorï¼šè”¡å®œå‹³ B033040009
+Dateï¼šOct. 19, 2015
+Purposeï¼šä»¥C++è£½ä½œä¸€å€‹ã€Œé›†åˆã€é¡åˆ¥ (set class)ï¼Œä½¿å…¶èƒ½é€²è¡Œã€Œå±¬æ–¼ã€ã€ã€Œè¯é›†ã€ã€ã€Œäº¤é›†ã€ã€ã€Œå·®é›†ã€ã€ã€ŒåŒ…å«ã€ç­‰äº”ç¨®é‹ç®—ã€‚
 */
 
 #include <iostream>
@@ -11,18 +11,18 @@ using namespace std;
 class TSet{
 	public:
 		TSet();                                         //Constructor
-		TSet(string);                                   //¨ã¦³ªì©l­ÈªºConstrutor
+		TSet(string);                                   //å…·æœ‰åˆå§‹å€¼çš„Construtor
 		~TSet();                                        //Destructor
-		void SetValue(int, int);                        //³]©wset¤º¬Y­Ó¦r¤¸¼Æ­Èªº¨ç¦¡
-		int GetValue(int);                              //¨ú±oset¤º¬Y­Ó¦r¤¸¼Æ­Èªº¨ç¦¡
-		bool in(char);                                  //½T»{¬Y­Ó¦r¤¸¬O§_¦s¦bªº¨ç¦¡
+		void SetValue(int, int);                        //è¨­å®šsetå…§æŸå€‹å­—å…ƒæ•¸å€¼çš„å‡½å¼
+		int GetValue(int);                              //å–å¾—setå…§æŸå€‹å­—å…ƒæ•¸å€¼çš„å‡½å¼
+		bool in(char);                                  //ç¢ºèªæŸå€‹å­—å…ƒæ˜¯å¦å­˜åœ¨çš„å‡½å¼
 		TSet operator+(const TSet& s);                  //overload +
 		TSet operator*(const TSet& s);                  //overload *
 		TSet operator-(const TSet& s);                  //overload -
 		bool operator>=(const TSet& s);                 //overload >=
 
 	private:
-		int value[256];                                 //¨Ì·ÓÃD¥Ø­n¨D¡A¨Ï¥Îªø«×¬°256ªº°}¦C¨Óªí¥Ü¤@­Ó¶°¦X
+		int value[256];                                 //ä¾ç…§é¡Œç›®è¦æ±‚ï¼Œä½¿ç”¨é•·åº¦ç‚º256çš„é™£åˆ—ä¾†è¡¨ç¤ºä¸€å€‹é›†åˆ
 };
 
 void TSet::SetValue(int index, int val){
@@ -42,7 +42,7 @@ bool TSet::in(char x){
 TSet::~TSet(){
 }
 
-TSet::TSet(){                                                   //¨S¦³µ¹¤©ªì­È®É¡A¹w³]ªì©l­È¬°¥ş³¡¬°0
+TSet::TSet(){                                                   //æ²’æœ‰çµ¦äºˆåˆå€¼æ™‚ï¼Œé è¨­åˆå§‹å€¼ç‚ºå…¨éƒ¨ç‚º0
 	for(int i = 0 ; i < 256 ; ++i)
 	value[i] = 0;
 }
@@ -88,7 +88,7 @@ bool TSet::operator>=(const TSet& s){
     return false;
 }
 
-std::ostream& operator<<(std::ostream& os, TSet& s){            //overload°w¹ïTSet®É¡Aostreamªº<<¹Bºâ¤lªºÀ³¹ï¤è¦¡ - ¿é¥X¶°¦X¤º®e
+std::ostream& operator<<(std::ostream& os, TSet& s){            //overloadé‡å°TSetæ™‚ï¼Œostreamçš„<<é‹ç®—å­çš„æ‡‰å°æ–¹å¼ - è¼¸å‡ºé›†åˆå…§å®¹
     string temp;
     for(int i = 0 ; i < 256 ; ++i)
         if(s.GetValue(i) == 1)
@@ -119,7 +119,7 @@ int main(){
         E = A - B;
         F = B - A;
 
-        cout << "Test Case " << (i+1) << ":" << endl;                       //¨Ì·ÓÃD¥Ø­n¨D®æ¦¡¡A±Nµ²ªG¿é¥X
+        cout << "Test Case " << (i+1) << ":" << endl;                       //ä¾ç…§é¡Œç›®è¦æ±‚æ ¼å¼ï¼Œå°‡çµæœè¼¸å‡º
         cout << "A: {" << A << "}" << endl;
         cout << "B: {" << B << "}" << endl;
         cout << "A+B: {" << C << "}" << endl;

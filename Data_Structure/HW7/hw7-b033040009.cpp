@@ -98,8 +98,8 @@ int cmpfunc (const void * a, const void * b)
 int main()
 {
     ifstream fin("input.txt");
-    if(!fin)                        // ÀË¬dÅªÀÉ¦¨¥\»P§_
-    cout << "ÅªÀÉ¥¢±Ñ" << endl;
+    if(!fin)                        // æª¢æŸ¥è®€æª”æˆåŠŸèˆ‡å¦
+    cout << "è®€æª”å¤±æ•—" << endl;
 
     int data_amount = 0;
     fin >> data_amount;
@@ -111,135 +111,135 @@ int main()
 
 
     // 1.Insertion Sort
-    //¶}ÀÉ¡A«Øºc­ì©l¸ê®Æ½Æ¥»
+    //é–‹æª”ï¼Œå»ºæ§‹åŽŸå§‹è³‡æ–™è¤‡æœ¬
     ofstream fout_A("outputA.txt");
     int *copy_1 = new int[data_amount];
     for(int i = 0 ; i < data_amount ; ++i)
         copy_1[i] = data[i];
 
-    //±Æ§Ç¨Ã­pºâ°õ¦æ®É¶¡
+    //æŽ’åºä¸¦è¨ˆç®—åŸ·è¡Œæ™‚é–“
     clock_t start, stop;
     start = clock();
     Insertion_Sort(copy_1, data_amount);
     stop = clock();
 
-    //¿é¥Xµ²ªG¨ìÀÉ®×
+    //è¼¸å‡ºçµæžœåˆ°æª”æ¡ˆ
     fout_A << "Insertion Sort" << endl;
     for(int i = 0 ; i < data_amount ; ++i)
         fout_A << copy_1[i] << endl;
     fout_A.close();
 
-    //Åã¥Ü°õ¦æµ²ªG
+    //é¡¯ç¤ºåŸ·è¡Œçµæžœ
     cout << "1. Insertion sort" << endl;
-    cout << "¸ê®Æ¼Æ¶q : " << data_amount << endl;
-    cout << "³B²z®É¶¡ : " <<((double) (stop - start)/CLOCKS_PER_SEC) << "s" << endl;
+    cout << "è³‡æ–™æ•¸é‡ : " << data_amount << endl;
+    cout << "è™•ç†æ™‚é–“ : " <<((double) (stop - start)/CLOCKS_PER_SEC) << "s" << endl;
     cout << endl << "/////////////////////////////////////////////////////////" << endl << endl;
 
 
 
 
     // 2.Merge Sort
-    //¶}ÀÉ¡A«Øºc­ì©l¸ê®Æ½Æ¥»
+    //é–‹æª”ï¼Œå»ºæ§‹åŽŸå§‹è³‡æ–™è¤‡æœ¬
     ofstream fout_B("outputB.txt");
     int *copy_2 = new int[data_amount];
     for(int i = 0 ; i < data_amount ; ++i)
         copy_2[i] = data[i];
 
-    //±Æ§Ç¨Ã­pºâ°õ¦æ®É¶¡
+    //æŽ’åºä¸¦è¨ˆç®—åŸ·è¡Œæ™‚é–“
     start = clock();
     Merge_Sort(copy_2, data_amount);
     stop = clock();
 
-    //¿é¥Xµ²ªG¨ìÀÉ®×
+    //è¼¸å‡ºçµæžœåˆ°æª”æ¡ˆ
     fout_B << "Merge Sort" << endl;
     for(int i = 0 ; i < data_amount ; ++i)
         fout_B << copy_2[i] << endl;
     fout_B.close();
 
-    //Åã¥Ü°õ¦æµ²ªG
+    //é¡¯ç¤ºåŸ·è¡Œçµæžœ
     cout << "2. Merge Sort" << endl;
-    cout << "¸ê®Æ¼Æ¶q : " << data_amount << endl;
-    cout << "³B²z®É¶¡ : " <<((double) (stop - start)/CLOCKS_PER_SEC) << "s" << endl;
+    cout << "è³‡æ–™æ•¸é‡ : " << data_amount << endl;
+    cout << "è™•ç†æ™‚é–“ : " <<((double) (stop - start)/CLOCKS_PER_SEC) << "s" << endl;
     cout << endl << "/////////////////////////////////////////////////////////" << endl << endl;
 
 
 
 
     // 3.Quick Sort
-    //¶}ÀÉ¡A«Øºc­ì©l¸ê®Æ½Æ¥»
+    //é–‹æª”ï¼Œå»ºæ§‹åŽŸå§‹è³‡æ–™è¤‡æœ¬
     ofstream fout_C("outputC.txt");
     int *copy_3 = new int[data_amount];
     for(int i = 0 ; i < data_amount ; ++i)
         copy_3[i] = data[i];
 
-    //±Æ§Ç¨Ã­pºâ°õ¦æ®É¶¡
+    //æŽ’åºä¸¦è¨ˆç®—åŸ·è¡Œæ™‚é–“
     start = clock();
     Quick_Sort(copy_3, data_amount, 0, data_amount - 1);
     stop = clock();
 
-    //¿é¥Xµ²ªG¨ìÀÉ®×
+    //è¼¸å‡ºçµæžœåˆ°æª”æ¡ˆ
     fout_C << "Quick Sort" << endl;
     for(int i = 0 ; i < data_amount ; ++i)
         fout_C << copy_3[i] << endl;
     fout_C.close();
 
-    //Åã¥Ü°õ¦æµ²ªG
+    //é¡¯ç¤ºåŸ·è¡Œçµæžœ
     cout << "3. Quick Sort" << endl;
-    cout << "¸ê®Æ¼Æ¶q : " << data_amount << endl;
-    cout << "³B²z®É¶¡ : " <<((double) (stop - start)/CLOCKS_PER_SEC) << "s" << endl;
+    cout << "è³‡æ–™æ•¸é‡ : " << data_amount << endl;
+    cout << "è™•ç†æ™‚é–“ : " <<((double) (stop - start)/CLOCKS_PER_SEC) << "s" << endl;
     cout << endl << "/////////////////////////////////////////////////////////" << endl << endl;
 
 
 
 
     // 4.qsort()
-    //¶}ÀÉ¡A«Øºc­ì©l¸ê®Æ½Æ¥»
+    //é–‹æª”ï¼Œå»ºæ§‹åŽŸå§‹è³‡æ–™è¤‡æœ¬
     ofstream fout_D("outputD.txt");
     int *copy_4 = new int[data_amount];
     for(int i = 0 ; i < data_amount ; ++i)
         copy_4[i] = data[i];
 
-    //±Æ§Ç¨Ã­pºâ°õ¦æ®É¶¡
+    //æŽ’åºä¸¦è¨ˆç®—åŸ·è¡Œæ™‚é–“
     start = clock();
     qsort(copy_4, data_amount, sizeof(int), cmpfunc);
     stop = clock();
 
-    //¿é¥Xµ²ªG¨ìÀÉ®×
+    //è¼¸å‡ºçµæžœåˆ°æª”æ¡ˆ
     fout_D << "qsort()" << endl;
     for(int i = 0 ; i < data_amount ; ++i)
         fout_D << copy_4[i] << endl;
     fout_D.close();
 
-    //Åã¥Ü°õ¦æµ²ªG
+    //é¡¯ç¤ºåŸ·è¡Œçµæžœ
     cout << "4. qsort()" << endl;
-    cout << "¸ê®Æ¼Æ¶q : " << data_amount << endl;
-    cout << "³B²z®É¶¡ : " <<((double) (stop - start)/CLOCKS_PER_SEC) << "s" << endl;
+    cout << "è³‡æ–™æ•¸é‡ : " << data_amount << endl;
+    cout << "è™•ç†æ™‚é–“ : " <<((double) (stop - start)/CLOCKS_PER_SEC) << "s" << endl;
     cout << endl << "/////////////////////////////////////////////////////////" << endl << endl;
 
 
 
 
     //5. sort()
-    //¶}ÀÉ¡A«Øºc­ì©l¸ê®Æ½Æ¥»
+    //é–‹æª”ï¼Œå»ºæ§‹åŽŸå§‹è³‡æ–™è¤‡æœ¬
     ofstream fout_E("outputE.txt");
     int *copy_5 = new int[data_amount];
     for(int i = 0 ; i < data_amount ; ++i)
         copy_5[i] = data[i];
 
-    //±Æ§Ç¨Ã­pºâ°õ¦æ®É¶¡
+    //æŽ’åºä¸¦è¨ˆç®—åŸ·è¡Œæ™‚é–“
     start = clock();
     sort(copy_5, copy_5 + data_amount);
     stop = clock();
 
-    //¿é¥Xµ²ªG¨ìÀÉ®×
+    //è¼¸å‡ºçµæžœåˆ°æª”æ¡ˆ
     fout_E << "sort()" << endl;
     for(int i = 0 ; i < data_amount ; ++i)
         fout_E << copy_5[i] << endl;
     fout_E.close();
 
-    //Åã¥Ü°õ¦æµ²ªG
+    //é¡¯ç¤ºåŸ·è¡Œçµæžœ
     cout << "5. sort()" << endl;
-    cout << "¸ê®Æ¼Æ¶q : " << data_amount << endl;
-    cout << "³B²z®É¶¡ : " <<((double) (stop - start)/CLOCKS_PER_SEC) << "s" << endl;
+    cout << "è³‡æ–™æ•¸é‡ : " << data_amount << endl;
+    cout << "è™•ç†æ™‚é–“ : " <<((double) (stop - start)/CLOCKS_PER_SEC) << "s" << endl;
     cout << endl << "/////////////////////////////////////////////////////////" << endl << endl;
 }

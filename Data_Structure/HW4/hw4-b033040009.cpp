@@ -1,54 +1,54 @@
 /*
-Author¡G½²©y¾± B033040009
-Date¡GNov. 9, 2015
-Purpose:¦è¬v´ÑÃM¤h(knight)¨«§¹´Ñ½Lªº¶¶§Ç¡A¨Ï¥ÎRecursive¹ê§@ 
+Authorï¼šè”¡å®œå‹³ B033040009
+Dateï¼šNov. 9, 2015
+Purpose:è¥¿æ´‹æ£‹é¨å£«(knight)èµ°å®Œæ£‹ç›¤çš„é †åºï¼Œä½¿ç”¨Recursiveå¯¦ä½œ
 */
 
 #include<iostream>
 using namespace std;
 int chessboard[6][6];
 
-int march(int n, int step, int row, int col){        //ÃM¤h¦æ¨«ªºFunction¡A°²­Y¯à¨«§¹´Ñ½L«h¶Ç¦^1¡A§_«h¶Ç¦^0 
+int march(int n, int step, int row, int col){        //é¨å£«è¡Œèµ°çš„Functionï¼Œå‡è‹¥èƒ½èµ°å®Œæ£‹ç›¤å‰‡å‚³å›1ï¼Œå¦å‰‡å‚³å›0
 	int i;
-	int r_next, c_next;    
-    
-    int const d_row[8] = { 1, 2,  2,  1, -1, -2, -2, -1 };  //¤K­Ó¤è¦V(K1~K8) iªº®t­È 
-    int const d_col[8] = { -2, -1, 1, 2, 2, 1,  -1,  -2 };  //¤K­Ó¤è¦V(K1~K8) jªº®t­È
-    
-    if(step > n * n) //°²­Y¨«§¹©Ò¦³®æ¤l¤F¡Areturn 1 
+	int r_next, c_next;
+
+    int const d_row[8] = { 1, 2,  2,  1, -1, -2, -2, -1 };  //å…«å€‹æ–¹å‘(K1~K8) içš„å·®å€¼
+    int const d_col[8] = { -2, -1, 1, 2, 2, 1,  -1,  -2 };  //å…«å€‹æ–¹å‘(K1~K8) jçš„å·®å€¼
+
+    if(step > n * n) //å‡è‹¥èµ°å®Œæ‰€æœ‰æ ¼å­äº†ï¼Œreturn 1
     return 1;
-    
+
     for(int i = 0 ; i < 8 ; ++i){
     	r_next = row + d_row[i];
     	c_next = col + d_col[i];
-    	
+
     	if(0 > r_next || r_next >= n ||
-	       0 > c_next || c_next >= n || 
-		   chessboard[r_next][c_next] != 0) //­Y¤U¤@¨BµLªk¦æ¨«(¨«¹L¤F©Î¬O¶W¥X´Ñ½L)¡A«hÄ~Äò¹Á¸Õ¤U¤@­Ó¤è¦V 
-		   continue; 
-		   
-		chessboard[r_next][c_next] = step; //±N·í«e¨B¼Æ¶ñ¤J´Ñ½L®æ¤l 
-		
+	       0 > c_next || c_next >= n ||
+		   chessboard[r_next][c_next] != 0) //è‹¥ä¸‹ä¸€æ­¥ç„¡æ³•è¡Œèµ°(èµ°éäº†æˆ–æ˜¯è¶…å‡ºæ£‹ç›¤)ï¼Œå‰‡ç¹¼çºŒå˜—è©¦ä¸‹ä¸€å€‹æ–¹å‘
+		   continue;
+
+		chessboard[r_next][c_next] = step; //å°‡ç•¶å‰æ­¥æ•¸å¡«å…¥æ£‹ç›¤æ ¼å­
+
 		if (march(n, step+1, r_next, c_next))
 		return 1;
-		
+
 		chessboard[r_next][c_next] = 0;
     }
-    return 0; //¨«¤£§¹©Ò¦³®æ¤l¡A¦]¦¹return 0 
+    return 0; //èµ°ä¸å®Œæ‰€æœ‰æ ¼å­ï¼Œå› æ­¤return 0
 }
 
 int main()
 {
     int n;
     while(cin >> n){
-    	for(int a = 0 ; a < 6 ; ++a)					 //ªì©l¤Æ¤G·L°}¦C 
+    	for(int a = 0 ; a < 6 ; ++a)					 //åˆå§‹åŒ–äºŒå¾®é™£åˆ—
     		for(int b = 0 ; b < 6 ; ++b)
     		chessboard[a][b] = 0;
-        chessboard[0][0] = 1;	
-		int x = 0, y = 0;                         //x, y¬°²{¦b¨«¨ìªº®æ¤l®y¼Ğ¡A¥Ñ¥ª¤W¨¤¶}©l¦æ¨«¬Gªì­È¬°0
-		int now_step = 2;	                      //²{¦b¨«¨ìªº¬O²Ä´X¨B¡A¥Ñ©ó²Ä¤@¨B©T©w¬°¥ª¤W¨¤¡A¦]¦¹now_step¤§ªì©l­È¥²µM¬°2 
-		
-		if(march(n, now_step, x, y)){			  //¨«§¹´Ñ½L¡A¿é¥Xµ²ªG 
+        chessboard[0][0] = 1;
+		int x = 0, y = 0;                         //x, yç‚ºç¾åœ¨èµ°åˆ°çš„æ ¼å­åº§æ¨™ï¼Œç”±å·¦ä¸Šè§’é–‹å§‹è¡Œèµ°æ•…åˆå€¼ç‚º0
+		int now_step = 2;	                      //ç¾åœ¨èµ°åˆ°çš„æ˜¯ç¬¬å¹¾æ­¥ï¼Œç”±æ–¼ç¬¬ä¸€æ­¥å›ºå®šç‚ºå·¦ä¸Šè§’ï¼Œå› æ­¤now_stepä¹‹åˆå§‹å€¼å¿…ç„¶ç‚º2
+
+		if(march(n, now_step, x, y)){			  //èµ°å®Œæ£‹ç›¤ï¼Œè¼¸å‡ºçµæœ
 			for(int j = 0; j < n; j++)
             {
                 for(int i = 0; i < n; i++)
@@ -56,9 +56,9 @@ int main()
                 printf("\n");
             }
 		}
-		
+
 		else{
-		cout << "No solution" << endl;			  //¨«¤£§¹¡AµL¸Ñ 
+		cout << "No solution" << endl;			  //èµ°ä¸å®Œï¼Œç„¡è§£
 		}
     }
 }
