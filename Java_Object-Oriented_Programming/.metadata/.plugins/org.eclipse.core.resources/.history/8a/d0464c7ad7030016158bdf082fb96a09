@@ -1,0 +1,9 @@
+package myjava.homework;
+
+// Represents a deposit ATM transaction
+
+public class Deposit extends Transaction{
+	
+	/* Fill your code here */
+
+}

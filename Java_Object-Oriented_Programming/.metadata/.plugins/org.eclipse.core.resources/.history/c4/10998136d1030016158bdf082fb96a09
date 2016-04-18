@@ -1,0 +1,39 @@
+package myjava.homework;
+
+//Represents a bank account
+
+public class Account {
+	
+	/* Fill your code here */
+	private int accountNumber;
+	private int pin;
+	private int totalBalance;
+	
+	public Account(){
+		accountNumber = 0;
+		pin = 0;
+		totalBalance = 0;
+	}
+	
+	public Account(int _accountNumber, int _pin, int _totalBalance) {
+		accountNumber = _accountNumber;
+		pin = _pin;
+		totalBalance = _totalBalance;
+	}
+	
+	public boolean validatePin() {
+		
+	}
+	
+	public int getTotalBalance() {
+		
+	}
+	
+	public void credit() {
+		
+	}
+	
+	public void debit() {
+		
+	}
+}

@@ -1,0 +1,9 @@
+package myjava.homework;
+
+// Abstract superclass Transaction represents an ATM transaction
+
+abstract class Transaction {
+	private int accountNumber;
+	
+	
+}

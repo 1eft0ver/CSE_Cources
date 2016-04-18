@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="org.omg.CORBA.PUBLIC_MEMBER"/>
+<fullyQualifiedTypeName name="com.sun.org.apache.xml.internal.resolver.helpers.PublicId"/>
+<fullyQualifiedTypeName name="java.lang.Void"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="myjava.homework.BankDatabase"/>
+<fullyQualifiedTypeName name="myjava.homework.BalanceInquiry"/>
+<fullyQualifiedTypeName name="myjava.homework.Withdrawal"/>
+<fullyQualifiedTypeName name="myjava.homework.Transaction"/>
+<fullyQualifiedTypeName name="myjava.homework.Deposit"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="myjava.homework.Screen"/>
+</qualifiedTypeNameHistroy>

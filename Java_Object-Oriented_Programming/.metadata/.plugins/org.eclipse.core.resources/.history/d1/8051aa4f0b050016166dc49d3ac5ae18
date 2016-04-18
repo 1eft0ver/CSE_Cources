@@ -1,0 +1,47 @@
+package myjava.homework;
+
+public class ATM {
+	private boolean userAuthenticated;
+	
+	public void run () {
+		while(true) {
+			Keypad theKeypad = new Keypad();
+			Screen theScreen = new Screen();
+			BankDatabase theDb = new BankDatabase();
+			int accountNum;
+			int PINNum;
+			theScreen.displayMessage("Please enter your account number: ");
+			accountNum = theKeypad.getInput();
+			theScreen.displayMessage("Enter your PIN: ");
+			PINNum = theKeypad.getInput();
+				
+			while(accountNum == -1 || PINNum == -1) {
+				theScreen.displayMessageLine("Invalid Input. Your account or PIN should only be represented by numbers 1 to 9. Please try again");
+				theScreen.displayMessage("Please enter your account number: ");
+				accountNum = theKeypad.getInput();
+				theScreen.displayMessage("Enter your PIN: ");
+				PINNum = theKeypad.getInput();
+			}
+				
+			while(theDb.authenticateUser(accountNum, PINNum) == false) {
+				theScreen.displayMessageLine("Invalid account or PIN. Please try again");
+				theScreen.displayMessage("Please enter your account number: ");
+				accountNum = theKeypad.getInput();
+				theScreen.displayMessage("Enter your PIN: ");
+				PINNum = theKeypad.getInput();
+			}
+			
+			int choice;
+			theScreen.displayMessageLine("");
+			theScreen.displayMessageLine("Main menu:");
+			theScreen.displayMessageLine("1. View my balance");
+			theScreen.displayMessageLine("2. Withdrawe");
+			theScreen.displayMessageLine("3. Deposit");
+			theScreen.displayMessageLine("4. Exit");
+			theScreen.displayMessageLine("");
+			theScreen.displayMessage("Enter a choice: ");
+			choice = theKeypad.getInput();
+		}
+	}
+	
+}
