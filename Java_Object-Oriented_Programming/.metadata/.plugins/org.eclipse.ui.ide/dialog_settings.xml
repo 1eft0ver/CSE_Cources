@@ -5,6 +5,7 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/home/leftover/Documents/GitHub/CSE_Cources/Java_Object-Oriented_Programming/HW6"/>
 			<item value="/home/leftover/Documents/GitHub/CSE_Cources/Java_Object-Oriented_Programming"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
