@@ -56,5 +56,5 @@ int main() {
     cout << i++ << ": " << "OK" << endl;
   if(a != b)
     cout << i++ << ": " << "OK" << endl;
-    
+
 }

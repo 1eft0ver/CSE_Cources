@@ -41,10 +41,26 @@ public:
   friend bool operator==(const Complex& x, const Complex& y);
   friend bool operator!=(const Complex& x, const Complex& y);
   friend ostream& operator<<(ostream& o, const Complex& x);
-  
+
 private:
     double real;
     double imag;
 };
+
+Complex Polar( const double leng, const double arg );
+double Norm( const Complex &x );
+double Abs( const Complex &x );
+double Arg( const Complex &x );
+Complex operator+( const Complex &x, const Complex &y );
+Complex operator-( const Complex &x, const Complex &y );
+Complex operator*( const Complex &x, const Complex &y );
+Complex operator/( const Complex &x, const Complex &y );
+Complex operator+=( Complex &x, const Complex &y );
+Complex operator-=( Complex &x, const Complex &y );
+Complex operator*=( Complex &x, const Complex &y );
+Complex operator/=( Complex &x, const Complex &y );
+bool operator==( const Complex &x, const Complex &y );
+bool operator!=( const Complex &x, const Complex &y );
+ostream &operator<<( ostream &o, const Complex &x );
 
 #endif
