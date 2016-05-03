@@ -1,9 +1,0 @@
-package myjava.homework;
-
-// Represents a withdrawal ATM transaction
-
-public class Withdrawal extends Transaction{
-
-	/* Fill your code here */
-
-}
