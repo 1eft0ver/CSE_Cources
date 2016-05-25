@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Client {
+	public static boolean isInteger(String str) {
+		Scanner sc = new Scanner(str);
+		if(sc.hasNextInt() == false) {
+			sc.close();
+			return false;
+		}
+		else{
+			sc.close();
+			return true;
+		}
+	}
+	
+	public static void main(String[] args) {
+		if(args.length > 4 || args.length < 4) {
+			System.out.println("Invalid arguments. You have to input arguments as the format : java Client <A quentity> <B quentity> <IP address> <port>");
+		}
+		else if(isInteger(args[0]) == false || isInteger(args[1]) == false || isInteger(args[3]) == false ) {
+			System.out.println("Invalid arguments. Some of your input(except IP address) is not an integer type value.");
+		}
+		else {
+			
+		}
+
+	}
+
+}

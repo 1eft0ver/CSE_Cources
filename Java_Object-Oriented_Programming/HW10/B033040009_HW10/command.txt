@@ -1,0 +1,3 @@
+Dir: B033040009_HW10\bin
+Server: java -cp .;../lib/*; myjava.homework.Server
+Client: java -cp .;../lib/*; myjava.homework.Client
